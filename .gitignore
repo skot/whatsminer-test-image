@@ -12,6 +12,7 @@ downloads/
 extracted-rootfs/
 firmware-patch/
 work-*/
+work-data/
 carved/
 _kernel.extracted/
 openixcard-output/

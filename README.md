@@ -20,13 +20,19 @@ After flashing, remove the SD card and boot from NAND.
 Current local image:
 
 ```text
-artifacts/images/h6os-v23-access-tmp-home.img
+artifacts/images/h6os-static-test-key-v2.img
 ```
 
 SHA256:
 
 ```text
-a1b5125239baa42385b2ccfb14047999a0e28f8b47fffd07cda51bd82073deb2
+b60658210a73759a3c5923f280af6213bc9a21d90b388e00a7dde9f9a38a72e1
+```
+
+Size:
+
+```text
+114294784 bytes / 109 MiB
 ```
 
 The original H6os Phoenix image used as input is kept locally as:
@@ -41,8 +47,15 @@ SHA256:
 78705ecbaf1503494ba671411fcbbd2a7a5c771478d8cc386b4df1cf235e4476
 ```
 
+Size:
+
+```text
+92667904 bytes / 88 MiB
+```
+
 `artifacts/` is intentionally ignored by git. Do not commit vendor firmware
-images or generated images.
+images or generated images. Ready-to-flash builds should be published as
+GitHub release assets instead of normal git-tracked files.
 
 ## Flash The SD Card On macOS
 
@@ -54,7 +67,7 @@ Example for `/dev/disk4`:
 ```sh
 diskutil unmountDisk /dev/disk4
 
-sudo dd if="artifacts/images/h6os-v23-access-tmp-home.img" \
+sudo dd if="artifacts/images/h6os-static-test-key-v2.img" \
   of=/dev/rdisk4 bs=4m status=progress conv=sync
 
 sync
@@ -188,6 +201,9 @@ micro:x:0:0:micro:/tmp/root-home:/bin/ash
 /tmp/root-home/.ssh/authorized_keys
 /etc/dropbear/authorized_keys
 eth0:1 inet addr:192.168.1.222
+dropbear processes:
+serial-shell: rescue setup end
+Link is Up - 100Mbps/Full
 ```
 
 ## How The Image Works
@@ -239,10 +255,10 @@ It replaces both `DATA_FEX00000000` entries and both `VDATA_FEX0000000`
 verifier entries inside the Phoenix image. The verifier is the 32-bit
 little-endian word sum of the patched `data.fex` payload.
 
-For v23:
+For `h6os-static-test-key-v2.img`:
 
 ```text
-VDATA_FEX = 0x96227115
+VDATA_FEX = 0xaeb94685
 ```
 
 ## Rescue Payload Changes
