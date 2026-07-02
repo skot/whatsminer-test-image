@@ -9,8 +9,8 @@ Usage:
     --dump-dir path/to/openix-dump \
     --output artifacts/images/h6os-access.img
 
-Optionally set SSH_PUBKEY_FILE to embed an existing public key. If it is not
-set, a local rescue keypair is generated under artifacts/keys/.
+By default this embeds the repository's static test key. Optionally set
+SSH_PUBKEY_FILE to embed a different public key.
 
 The dump directory must contain at least:
   boot0_sdcard.fex
@@ -57,13 +57,7 @@ if [ -z "$stock_img" ] || [ -z "$dump_dir" ] || [ -z "$output_img" ]; then
 fi
 
 if [ -z "$ssh_pubkey_file" ]; then
-	key_dir=${KEY_DIR:-artifacts/keys}
-	key_file="$key_dir/whatsminer_rescue_rsa"
-	ssh_pubkey_file="$key_file.pub"
-	if [ ! -f "$ssh_pubkey_file" ]; then
-		mkdir -p "$key_dir"
-		ssh-keygen -t rsa -b 3072 -N "" -C "whatsminer-rescue" -f "$key_file"
-	fi
+	ssh_pubkey_file=keys/whatsminer_test_rescue_key.pub
 fi
 
 for path in "$stock_img" "$dump_dir/boot0_sdcard.fex" "$dump_dir/boot_package.fex" "$dump_dir/sunxi_mbr.fex" "$dump_dir/data.fex" "$ssh_pubkey_file"; do

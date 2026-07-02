@@ -42,7 +42,7 @@ SHA256:
 ```
 
 `artifacts/` is intentionally ignored by git. Do not commit vendor firmware
-images, generated images, or private SSH keys.
+images or generated images.
 
 ## Flash The SD Card On macOS
 
@@ -83,16 +83,27 @@ auth: SSH key
 uid: 0
 ```
 
-Use the private key corresponding to the public key embedded during image
-generation. If you used the default build wrapper, that key is generated
-locally at `artifacts/keys/whatsminer_rescue_rsa`:
+By default, the build wrapper embeds the static development keypair included in
+this repository:
+
+```text
+keys/whatsminer_test_rescue_key
+keys/whatsminer_test_rescue_key.pub
+```
+
+This is intentional for test images, but it is not secure. Anyone with this
+repository can log in to a board flashed with an image that embeds this key.
+Use these images only on trusted test networks, or rebuild with
+`SSH_PUBKEY_FILE=...` to embed your own key.
+
+Default test-key login:
 
 ```sh
 ssh \
   -o HostKeyAlgorithms=+ssh-rsa \
   -o PubkeyAcceptedAlgorithms=+ssh-rsa \
   -o IdentitiesOnly=yes \
-  -i artifacts/keys/whatsminer_rescue_rsa \
+  -i keys/whatsminer_test_rescue_key \
   micro@192.168.1.222
 ```
 
@@ -104,7 +115,7 @@ ssh \
   -o HostKeyAlgorithms=+ssh-rsa \
   -o PubkeyAcceptedAlgorithms=+ssh-rsa \
   -o IdentitiesOnly=yes \
-  -i artifacts/keys/whatsminer_rescue_rsa \
+  -i keys/whatsminer_test_rescue_key \
   micro@192.168.1.222
 ```
 
@@ -267,9 +278,9 @@ tools/build_access_image.sh
 ```
 
 It injects an SSH public key into `payload/serial-shell.sh.in`, patches
-`DATA_FEX`, and builds the final SD-card image. If `SSH_PUBKEY_FILE` is not
-set, it generates a local rescue keypair under `artifacts/keys/`. It needs the
-stock Phoenix IMG and an Openix dump directory containing at least:
+`DATA_FEX`, and builds the final SD-card image. By default it embeds
+`keys/whatsminer_test_rescue_key.pub`. It needs the stock Phoenix IMG and an
+Openix dump directory containing at least:
 
 ```text
 boot0_sdcard.fex
@@ -287,7 +298,7 @@ tools/build_access_image.sh \
   --output artifacts/images/h6os-access.img
 ```
 
-To embed an existing key instead:
+To embed your own key instead:
 
 ```sh
 SSH_PUBKEY_FILE=~/.ssh/id_rsa.pub tools/build_access_image.sh \
