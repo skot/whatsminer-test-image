@@ -9,7 +9,7 @@ platform.
 The CB4_V10 control board can be powered with 12V DC using the 2-pin JST
 connector in the upper-left corner.
 
-![CB4 power connector pinout](cb4-power.png)
+![CB4 power connector pinout](cb4-power.jpg)
 
 ## Current Result
 
