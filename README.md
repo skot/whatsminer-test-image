@@ -42,8 +42,7 @@ SHA256:
 ```
 
 `artifacts/` is intentionally ignored by git. Do not commit vendor firmware
-images or generated images with personal SSH keys. If you publish release
-artifacts, rebuild the access image with the recipient's public key.
+images, generated images, or private SSH keys.
 
 ## Flash The SD Card On macOS
 
@@ -85,14 +84,15 @@ uid: 0
 ```
 
 Use the private key corresponding to the public key embedded during image
-generation:
+generation. If you used the default build wrapper, that key is generated
+locally at `artifacts/keys/whatsminer_rescue_rsa`:
 
 ```sh
 ssh \
   -o HostKeyAlgorithms=+ssh-rsa \
   -o PubkeyAcceptedAlgorithms=+ssh-rsa \
   -o IdentitiesOnly=yes \
-  -i ~/.ssh/id_rsa \
+  -i artifacts/keys/whatsminer_rescue_rsa \
   micro@192.168.1.222
 ```
 
@@ -104,7 +104,7 @@ ssh \
   -o HostKeyAlgorithms=+ssh-rsa \
   -o PubkeyAcceptedAlgorithms=+ssh-rsa \
   -o IdentitiesOnly=yes \
-  -i ~/.ssh/id_rsa \
+  -i artifacts/keys/whatsminer_rescue_rsa \
   micro@192.168.1.222
 ```
 
@@ -266,9 +266,10 @@ The convenient rebuild wrapper is:
 tools/build_access_image.sh
 ```
 
-It injects your SSH public key into `payload/serial-shell.sh.in`, patches
-`DATA_FEX`, and builds the final SD-card image. It needs the stock Phoenix IMG
-and an Openix dump directory containing at least:
+It injects an SSH public key into `payload/serial-shell.sh.in`, patches
+`DATA_FEX`, and builds the final SD-card image. If `SSH_PUBKEY_FILE` is not
+set, it generates a local rescue keypair under `artifacts/keys/`. It needs the
+stock Phoenix IMG and an Openix dump directory containing at least:
 
 ```text
 boot0_sdcard.fex
@@ -278,6 +279,15 @@ data.fex
 ```
 
 Example:
+
+```sh
+tools/build_access_image.sh \
+  --stock-img artifacts/images/stock-h6os-20220422.18.img \
+  --dump-dir artifacts/openix-dump \
+  --output artifacts/images/h6os-access.img
+```
+
+To embed an existing key instead:
 
 ```sh
 SSH_PUBKEY_FILE=~/.ssh/id_rsa.pub tools/build_access_image.sh \

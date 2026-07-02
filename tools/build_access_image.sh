@@ -4,10 +4,13 @@ set -euo pipefail
 usage() {
 	cat <<'EOF'
 Usage:
-  SSH_PUBKEY_FILE=~/.ssh/id_rsa.pub tools/build_access_image.sh \
+  tools/build_access_image.sh \
     --stock-img artifacts/images/stock-h6os-20220422.18.img \
     --dump-dir path/to/openix-dump \
     --output artifacts/images/h6os-access.img
+
+Optionally set SSH_PUBKEY_FILE to embed an existing public key. If it is not
+set, a local rescue keypair is generated under artifacts/keys/.
 
 The dump directory must contain at least:
   boot0_sdcard.fex
@@ -48,9 +51,19 @@ while [ "$#" -gt 0 ]; do
 	esac
 done
 
-if [ -z "$stock_img" ] || [ -z "$dump_dir" ] || [ -z "$output_img" ] || [ -z "$ssh_pubkey_file" ]; then
+if [ -z "$stock_img" ] || [ -z "$dump_dir" ] || [ -z "$output_img" ]; then
 	usage >&2
 	exit 2
+fi
+
+if [ -z "$ssh_pubkey_file" ]; then
+	key_dir=${KEY_DIR:-artifacts/keys}
+	key_file="$key_dir/whatsminer_rescue_rsa"
+	ssh_pubkey_file="$key_file.pub"
+	if [ ! -f "$ssh_pubkey_file" ]; then
+		mkdir -p "$key_dir"
+		ssh-keygen -t rsa -b 3072 -N "" -C "whatsminer-rescue" -f "$key_file"
+	fi
 fi
 
 for path in "$stock_img" "$dump_dir/boot0_sdcard.fex" "$dump_dir/boot_package.fex" "$dump_dir/sunxi_mbr.fex" "$dump_dir/data.fex" "$ssh_pubkey_file"; do
@@ -95,3 +108,15 @@ docker run --rm -v "$PWD:/work" -w /work "$docker_image" sh -lc "
 
 python3 tools/patch_phoenix_data_payload.py "$stock_img" "$payload_img" "$patched_phoenix"
 python3 tools/build_phoenix_product_force_sprite.py "$patched_phoenix" "$dump_dir" "$output_img"
+
+cat <<EOF
+
+Access image written to:
+  $output_img
+
+Embedded public key:
+  $ssh_pubkey_file
+
+SSH command after flashing and NAND boot:
+  ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa -o IdentitiesOnly=yes -i ${ssh_pubkey_file%.pub} micro@192.168.1.222
+EOF
