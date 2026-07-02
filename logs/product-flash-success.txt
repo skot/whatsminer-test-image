@@ -1,0 +1,1632 @@
+[210]HELLO! BOOT0 is starting!
+[213]boot0 commit : 5eace7f33ff99d9692d5845581e67a7b334623cf
+ 
+[450]axp read error
+[453]set pll start
+[456]set pll end
+[458]rtc[0] value = 0x00000000
+[461]rtc[1] value = 0x00000000
+[464]rtc[2] value = 0x00000000
+[467]rtc[3] value = 0x00000000
+[470]rtc[4] value = 0x00000000
+[473]rtc[5] value = 0x00000000
+[476]DRAM VERSION IS V2_7
+[484]BYTE0 GATE ERRO IS = 00000002
+[487]BYTE1 GATE ERRO IS = 00000002
+[491]BYTE2 GATE ERRO IS = 00000003
+[494]BYTE3 GATE ERRO IS = 00000003
+[507]DRAM CLK =672 MHZ
+[509]DRAM Type =3 (3:DDR3,4:DDR4,6:LPDDR2,7:LPDDR3)
+[514]DRAM zq value: 003b3bfb
+[521]IPRD=007e007d--PGCR0=00000f7d--PLL=b0003700
+[526]Actual DRAM SIZE =256 M
+[529]DRAM SIZE =256 M,para1 = 000030ea,para2 = 01000001
+[541]DRAM simple test OK.
+[543]dram size =256
+[546]card no is 0
+[548]sdcard 0 line count 4
+[551][mmc]: mmc driver ver 2017-10-19 10:34:00
+[555][mmc]: sdc0 spd mode error, 2
+[559][mmc]: mmc 0 bias 00000000
+[567][mmc]: Wrong media type 0x00000000
+[571][mmc]: ***Try SD card 0***
+[590][mmc]: HSSDR52/SDR25 4 bit
+[593][mmc]: 50000000 Hz
+[595][mmc]: 30436 MB
+[597][mmc]: ***SD/MMC 0 init OK!!!***
+[744]Loading boot-pkg Succeed(index=0).
+[747]Entry_name        = u-boot
+[765]Entry_name        = parameter
+[768]Entry_name        = monitor
+[772]Entry_name        = scp
+[785]set arisc reset to de-assert state
+[789]Entry_name        = soc-cfg
+[793]Entry_name        = dtb
+[797]Entry_name        = logo
+[800]Ready to disable icache.
+[803]Jump to secend Boot.
+INFO:    Configuring SPC Controller
+NOTICE:  BL3-1: v1.0(debug):c5e8aec
+NOTICE:  BL3-1: Built : 14:42:22, Apr 26 2018
+NOTICE:  BL3-1 commit: c5e8aec20ca8c6ce31078c5689cbdb1a7352c813
+
+INFO:    BL3-1: Initializing runtime services
+ERROR:   Error initializing runtime service tspd_fast
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address = 0x4a000000
+INFO:    BL3-1: Next image spsr = 0x1d3
+
+
+U-Boot 2014.07 (Jan 17 2022 - 06:31:46) Allwinner Technology 
+
+uboot commit : 349d9856db5631d99dc8c6f43b7c824155300ef9
+ 
+secure enable bit: 0
+normal mode: with secure monitor
+I2C:   ready
+[0.852]pmbus:   ready
+u0:d1000984
+[0.857][ARISC] :arisc initialize
+[0.886][ARISC] :arisc para ok
+[SCP] :sunxi-arisc driver begin startup 2
+[SCP] :arisc version: []
+[SCP] :sunxi-arisc driver v1.10 is starting
+[0.900][ARISC] :sunxi-arisc driver startup succeeded
+set pc_bias(1) bias:1800
+set pg_bias(5) bias:1800
+probe axp is dummy
+[0.900]PMU: cpux 1320 Mhz,AXI=440 Mhz
+PLL6=600 Mhz,AHB1=200 Mhz, APB1=100Mhz MBus=400Mhz
+DRAM:  256 MiB
+[0.902]fdt addr: 0x49cbc620
+[0.903]gd->fdt_size: 0x21c20
+Relocation Offset is: 05d68000
+axp: get node[charger0] error
+gic: sec monitor mode
+try sprite_led_gpio config
+sprite_led_gpio start
+workmode = 17,storage type = 1
+try nand fail
+try card 2 
+[0.990][mmc]: mmc driver ver 2017-11-30 10:34:00
+[0.992][mmc]: get sdc2 sdc_wp fail.
+[0.992][mmc]: get sdc2 sdc_hc_cap_unit fail.
+[0.992][mmc]: get sdc_ex_dly_used 2, use auto tuning sdly
+[0.994][mmc]: current is product mode, it will tune sdly later
+[1.000][mmc]: card2 io is 1.8V.
+[1.003][mmc]: get sdc2 sdc_tm4_hs200_max_freq 150.
+[1.007][mmc]: get sdc2 sdc_tm4_hs400_max_freq 100.
+SUNXI SD/MMC: 2
+[1.018][mmc]: ************Try SD card 2************
+[1.019][mmc]: mmc send if cond failed
+[1.022][mmc]: send app cmd failed
+[1.024][mmc]: ************Try MMC card 2************
+[1.033][mmc]: read op condition failed
+[1.033][mmc]: mmc send op cond failed
+[1.036][mmc]: read op condition failed
+[1.039][mmc]: mmc send op cond failed
+[1.042][mmc]: Card did not respond to voltage select!
+[1.047][mmc]: ************SD/MMC 2 init error!************
+[1.052][mmc]: mmc_init: mmc init fail, err -17
+MMC init failed
+try emmc fail
+[1.059]NAND_UbootProbe start Nov 20 2021 04:25:49
+[1.064]set m0 retry cnt 200
+[1.066]m0 retry cnt 200
+[1.068]NB1 : enter phy init
+[1.071]nand_physic_init
+[1.077]pll6 clock is 600000000 Hz
+[1.077]pll6 clock is 600000000 Hz
+[1.079]uboot Nand0 clk: 20MHz,PERI=1200,N=4,M=15,T=10
+[1.084]uboot Nand Ecc clk: 20MHz,PERI=1200,N=4,M=15,T=20
+[1.089]pll6 clock is 600000000 Hz
+[1.092]pll6 clock is 600000000 Hz
+[1.095]uboot Nand0 clk: 40MHz,PERI=1200,N=2,M=15,T=20
+[1.100]uboot Nand Ecc clk: 40MHz,PERI=1200,N=2,M=15,T=40
+[1.105]Reset NDFC start 0  0
+[1.107]Reset NDFC end 0  0
+[1.110]channel 0 chip 0: 98 da 90 15 76 16 08 00
+[1.114]nand not support! channel 0 chip 1: 00 00 00 00 00 00 00 00
+[1.120]nand not support! channel 0 chip 2: 00 00 00 00 00 00 00 00
+[1.126]nand not support! channel 0 chip 3: 00 00 00 00 00 00 00 00
+[1.132]nand : get id number_ctl from script:0x55aaaa55
+[1.137]build nand physical connection ok...
+[1.141]CE: [1.142]0 [1.142]
+RB: [1.144]0 [1.144]
+[1.145]pll6 clock is 600000000 Hz
+[1.148]pll6 clock is 600000000 Hz
+[1.151]check scan data, first_check 4 0!
+[1.155]interface change ddr_type:0 sclk0:25 sclk1:50 sdr_edo_bak:1 ddr_edo_bak:1 ddr_delay_bak:0 !
+[1.163]pll6 clock is 600000000 Hz
+[1.166]pll6 clock is 600000000 Hz
+[1.170]uboot Nand0 clk: 50MHz,PERI=1200,N=2,M=12,T=25
+[1.174]uboot Nand Ecc clk: 50MHz,PERI=1200,N=2,M=12,T=50
+[1.179]_get right timing para, set edo to 1 for sdr nand.
+[1.184] m0 special init 
+[1.187]physic_info_read start!!
+[1.190]physic_info_get_offset start!!
+[1.195]physic_info_get_one_copy start!!
+[1.199]block 21 page 8
+[1.199]block 21 page 9
+[1.201]block 21 page 10
+[1.203]block 21 page 11
+[1.205]block 21 page 12
+[1.207]block 21 page 13
+[1.209]block 21 page 14
+[1.212]block 21 page 15
+[1.214]block 21 page 16
+[1.216]block 21 page 17
+[1.218]block 21 page 18
+[1.220]block 21 page 19
+[1.222]block 21 page 20
+[1.225]block 21 page 21
+[1.227]block 21 page 22
+[1.229]block 21 page 23
+[1.231]physic info copy is ok
+[1.234]==============show_nctri======================
+[1.238]channel_id:            0
+[1.241]type:                  1
+[1.244]chip_cnt:              1
+[1.247]chip_connect_info:     1
+[1.250]rb_connect_info:       1
+[1.253]ce: [1.254]0 [1.254]
+rb: [1.256]0 [1.256]
+[1.257]dma_type:              1
+[1.260]dma_addr:              1255637360
+[1.264]write_wait_rb_before:  0
+[1.267]write_wait_rb_mode:    0
+[1.269]rb_ready_flag:         1
+[1.272]dma_ready_flag:        0
+[1.275]timing ctl: [1.277]0x100 [1.278]
+[1.279]print ndfc reg:
+[1.281]reg_ctl:               0x0f004119
+[1.284]reg_sta:               0x00000f01
+[1.288]reg_int:               0x00000000
+[1.292]reg_timing_ctl:        0x00000100
+[1.295]reg_timing_cfg:        0x00010095
+[1.299]reg_addr_low:          0x05570000
+[1.303]reg_addr_high:         0x00000000
+[1.306]reg_byte_cnt:          0x00000001
+[1.310]reg_cmd:               0x85ec0000
+[1.313]reg_read_cmd_set:      0x00e00530
+[1.317]reg_write_cmd_set:     0x70008510
+[1.321]reg_io:                0x70008510
+[1.324]reg_ecc_ctl:           0x4a800308
+[1.328]reg_ecc_sta:           0x00000000
+[1.332]reg_debug:             0x00000100
+[1.335]reg_err_cnt0:          0x00000000
+[1.339]reg_err_cnt1:          0x00000000
+[1.343]reg_err_cnt2:          0x00000000
+[1.346]reg_err_cnt3:          0x00000000
+[1.350]reg_user_data_base:    0x00000000
+[1.354]reg_efnand_sta:        0x00000000
+[1.357]reg_spare_area:        0x00000800
+[1.361]reg_pat_id:            0x00000000
+[1.364]reg_dma_cnt:           0x00000000
+[1.368]reg_ram0_base:         0x00000000
+[1.372]reg_ram1_base:         0x00000000
+[1.375]reg_dma_sta:           0x02000000
+[1.379]==============show_nctri end======================
+[1.384]==============show_nci======================
+[1.389]id: [1.390]98 [1.391]da [1.391]90 [1.392]15 [1.393]76 [1.394]ff [1.395]ff [1.396]ff [1.397]
+[1.397]chip_no:                   0
+[1.401]nctri_chip_no:             0
+[1.404]driver_no:                 0
+[1.407]blk_cnt_per_chip:          2048
+[1.410]sector_cnt_per_page:       4
+[1.414]page_cnt_per_blk:          64
+[1.417]page_offset_for_next_blk:  64
+[1.420]randomizer:                1
+[1.423]read_retry:                0
+[1.427]interface_type:            0
+[1.430]timing_mode:               2
+[1.433]support_change_onfi_timing_mode:  0
+[1.437]support_ddr2_specific_cfg:        0
+[1.441]support_io_driver_strength:       0
+[1.445]support_vendor_specific_cfg:      0
+[1.448]support_onfi_sync_reset:   0
+[1.452]support_toggle_only:       0
+[1.455]frequency:                 25
+[1.458]ecc_mode:                  3
+[1.461]max_erase_times:           10000
+[1.465]page_addr_bytes:           0
+[1.468]sdata_bytes_per_page:      8
+[1.471]nsci chip_no:              0x00000000
+[1.475]nctri channel_id:          0x00000000
+[1.479]multi_plane_read_cmd0:     0x00000000
+[1.483]multi_plane_read_cmd1:     0x00000030
+[1.487]multi_plane_write_cmd0:    0x00000011
+[1.491]multi_plane_write_cmd1:    0x00000081
+[1.495]bad_block_flag_position:   0x00000002
+[1.499]multi_plane_block_offset:  0x00000001
+[1.503]id_number:                 0x0002001b
+[1.507]================show_nsi====================
+[1.512]chip_cnt:      1
+[1.514]block_nums:    0
+[1.516]================show_nssi====================
+[1.521]super_chip_cnt:      1
+[1.523]super_block_nums:    0
+[1.526]support_two_plane:   1
+[1.529]support_v_interleave:0
+[1.531]support_dual_channel:0
+[1.534]=================show_nsci===================
+[1.539]chip_no:                       0
+[1.542]blk_cnt_per_super_chip:        1024
+[1.546]sector_cnt_per_super_page:     8
+[1.550]page_cnt_per_super_blk:        64
+[1.553]page_offset_for_next_super_blk:64
+[1.557]spare_bytes:                   16
+[1.561]two_plane:                     1
+[1.564]channel_num:                   1
+[1.568]vertical_interleave:           0
+[1.571]dual_channel:                  0
+[1.575]driver_no:                     0
+[1.578]nci_first:                     0 0
+[1.582]uboot: nand version: 3 6023 20201203 17191621 
+[1.587]nand_physic_init end
+[1.590]nand secure storage ok: 58,59
+[1.593]NandHwInit end
+[1.595]NB1 : nand phy init ok
+[1.597]NB1 : enter phy Exit
+[1.600]NandHwExit nand not need to close!
+[1.604]NAND_UbootProbe end: 0x0
+nand found
+[1.608][mmc]: mmc driver ver 2017-11-30 10:34:00
+SUNXI SD/MMC: 2, SUNXI SD/MMC: 0
+[1.620][mmc]: ************Try SD card 0************
+[1.637][mmc]: host caps: 0x27
+[1.637][mmc]: MID 03 PSN c817bb5a
+[1.637][mmc]: PNM SD32G -- 0x53-44-33-32-47
+[1.637][mmc]: PRV 8.5
+[1.637][mmc]: MDT m-2 y-2025
+[1.637][mmc]: bus_width      : 4 bit
+[1.637][mmc]: user capacity  : 30436 MB
+[1.640][mmc]: SD/MMC 0 init OK!!!
+[1.644][mmc]: End mmc_init_boot
+mmc init ok
+crc mbr copy[0] failed
+crc mbr copy[1] failed
+crc mbr copy[2] failed
+crc mbr copy[3] failed
+[1.656]start
+drv_disp_init
+init_clocks: finish init_clocks.
+[1.667]HDMI 2.0 driver init start!
+__clk_enable: clk is null.
+[1.669]hdmi cec clk enable failed!
+[1.670]enable ddc_scl pin
+[1.672]enable ddc_sda pin
+[1.675]enable hmid cec pin
+pwm_request: reg = 0x300a000. pwm = 1.
+request pwm success, pwm = 1.
+speed=200000, slave=16
+drv_disp_init finish
+hdmi hpd out, force open?
+save_int_to_kernel disp.init_disp(0x20b040a) code:<no error>
+invalid display config
+save disp device failed
+size=0x384000, ram_size=0x10000000, FRAME_BUFFER_SIZE=0x1000000
+[1.993]end
+[1.993]try to burn key
+work mode=0x11
+run card sprite
+try sprite_led_gpio config
+sprite_led_gpio start
+[1.998]sunxi sprite begin
+[2.007]board_display_show_until_lcd_open
+[2.007]disp_get_layer (0,-473953534,-473953791) fail
+[2.009]get layer(0,-473953534,-473953791) fail
+[2.013]disp_get_layer (0,-473953534,-473953791) fail
+[2.018]get layer(0,-473953534,-473953791) fail
+[2.022]disp_get_layer (0,-473953534,-473953791) fail
+[2.026]get layer(0,-473953534,-473953791) fail
+screen_width = 1280
+screen_height = 720
+bar x1: 320 y1: 320
+bar x2: 960 y2: 400
+** Bad device size - sunxi_flash 0 **
+sunxi ui_char info error : unable to open font file font32.sft
+ui_char_info.word_size is 32
+boot_ui_char: open font failed
+[2.054]firmware probe ok
+[2.055]fetch download map
+*************DOWNLOAD MAP DUMP************
+total download part 7
+
+download part[0] name          :boot-resource
+download part[0] download file :BOOT-RESOURCE_FE
+download part[0] verify file   :VBOOT-RESOURCE_F
+download part[0] lenlo         :0x4000
+download part[0] addrlo        :0x8000
+download part[0] encrypt       :0x0
+download part[0] verify        :0x1
+
+download part[1] name          :env
+download part[1] download file :ENV_FEX000000000
+download part[1] verify file   :VENV_FEX00000000
+download part[1] lenlo         :0x8000
+download part[1] addrlo        :0xc000
+download part[1] encrypt       :0x0
+download part[1] verify        :0x1
+
+download part[2] name          :boot
+download part[2] download file :FIT-IMAGE_FEX000
+download part[2] verify file   :VFIT-IMAGE_FEX00
+download part[2] lenlo         :0x10000
+download part[2] addrlo        :0x14000
+download part[2] encrypt       :0x0
+download part[2] verify        :0x1
+
+download part[3] name          :rootfs
+download part[3] download file :ROOTFS_FEX000000
+download part[3] verify file   :VROOTFS_FEX00000
+download part[3] lenlo         :0x20000
+download part[3] addrlo        :0x24000
+download part[3] encrypt       :0x0
+download part[3] verify        :0x1
+
+download part[4] name          :recovery
+download part[4] download file :FIT-IMAGE_FEX000
+download part[4] verify file   :VFIT-IMAGE_FEX00
+download part[4] lenlo         :0x10000
+download part[4] addrlo        :0x44000
+download part[4] encrypt       :0x0
+download part[4] verify        :0x1
+
+download part[5] name          :data
+download part[5] download file :DATA_FEX00000000
+download part[5] verify file   :VDATA_FEX0000000
+download part[5] lenlo         :0x8000
+download part[5] addrlo        :0x54000
+download part[5] encrypt       :0x0
+download part[5] verify        :0x1
+
+download part[6] name          :data_bak
+download part[6] download file :DATA_FEX00000000
+download part[6] verify file   :VDATA_FEX0000000
+download part[6] lenlo         :0x8000
+download part[6] addrlo        :0x5c000
+download part[6] encrypt       :0x0
+download part[6] verify        :0x1
+
+[2.243]fetch mbr
+the 0 mbr table is ok
+the 1 mbr table is ok
+the 2 mbr table is ok
+the 3 mbr table is ok
+*************MBR DUMP***************
+total mbr part 9
+
+part[0] name      :boot-resource
+part[0] classname :DISK
+part[0] addrlo    :0x8000
+part[0] lenlo     :0x4000
+part[0] user_type :32768
+part[0] keydata   :0
+part[0] ro        :0
+
+part[1] name      :env
+part[1] classname :DISK
+part[1] addrlo    :0xc000
+part[1] lenlo     :0x8000
+part[1] user_type :32768
+part[1] keydata   :0
+part[1] ro        :0
+
+part[2] name      :boot
+part[2] classname :DISK
+part[2] addrlo    :0x14000
+part[2] lenlo     :0x10000
+part[2] user_type :32768
+part[2] keydata   :0
+part[2] ro        :0
+
+part[3] name      :rootfs
+part[3] classname :DISK
+part[3] addrlo    :0x24000
+part[3] lenlo     :0x20000
+part[3] user_type :32768
+part[3] keydata   :0
+part[3] ro        :0
+
+part[4] name      :recovery
+part[4] classname :DISK
+part[4] addrlo    :0x44000
+part[4] lenlo     :0x10000
+part[4] user_type :32768
+part[4] keydata   :0
+part[4] ro        :0
+
+part[5] name      :data
+part[5] classname :DISK
+part[5] addrlo    :0x54000
+part[5] lenlo     :0x8000
+part[5] user_type :32768
+part[5] keydata   :0
+part[5] ro        :0
+
+part[6] name      :data_bak
+part[6] classname :DISK
+part[6] addrlo    :0x5c000
+part[6] lenlo     :0x8000
+part[6] user_type :32768
+part[6] keydata   :0
+part[6] ro        :0
+
+part[7] name      :reserved
+part[7] classname :DISK
+part[7] addrlo    :0x64000
+part[7] lenlo     :0x8000
+part[7] user_type :32768
+part[7] keydata   :0
+part[7] ro        :0
+
+part[8] name      :UDISK
+part[8] classname :DISK
+part[8] addrlo    :0x6c000
+part[8] lenlo     :0x0
+part[8] user_type :0
+part[8] keydata   :0
+part[8] ro        :0
+
+*************MBR DUMP***************
+total mbr part 9
+
+part[0] name      :boot-resource
+part[0] classname :DISK
+part[0] addrlo    :0x8000
+part[0] lenlo     :0x4000
+part[0] user_type :0x8000
+part[0] keydata   :0x0
+part[0] backup_flag   :0x0
+part[0] ro        :0x0
+
+part[1] name      :env
+part[1] classname :DISK
+part[1] addrlo    :0xc000
+part[1] lenlo     :0x8000
+part[1] user_type :0x8000
+part[1] keydata   :0x0
+part[1] backup_flag   :0x0
+part[1] ro        :0x0
+
+part[2] name      :boot
+part[2] classname :DISK
+part[2] addrlo    :0x14000
+part[2] lenlo     :0x10000
+part[2] user_type :0x8000
+part[2] keydata   :0x0
+part[2] backup_flag   :0x0
+part[2] ro        :0x0
+
+part[3] name      :rootfs
+part[3] classname :DISK
+part[3] addrlo    :0x24000
+part[3] lenlo     :0x20000
+part[3] user_type :0x8000
+part[3] keydata   :0x0
+part[3] backup_flag   :0x0
+part[3] ro        :0x0
+
+part[4] name      :recovery
+part[4] classname :DISK
+part[4] addrlo    :0x44000
+part[4] lenlo     :0x10000
+part[4] user_type :0x8000
+part[4] keydata   :0x0
+part[4] backup_flag   :0x0
+part[4] ro        :0x0
+
+part[5] name      :data
+part[5] classname :DISK
+part[5] addrlo    :0x54000
+part[5] lenlo     :0x8000
+part[5] user_type :0x8000
+part[5] keydata   :0x0
+part[5] backup_flag   :0x0
+part[5] ro        :0x0
+
+part[6] name      :data_bak
+part[6] classname :DISK
+part[6] addrlo    :0x5c000
+part[6] lenlo     :0x8000
+part[6] user_type :0x8000
+part[6] keydata   :0x0
+part[6] backup_flag   :0x0
+part[6] ro        :0x0
+
+part[7] name      :reserved
+part[7] classname :DISK
+part[7] addrlo    :0x64000
+part[7] lenlo     :0x8000
+part[7] user_type :0x8000
+part[7] keydata   :0x0
+part[7] backup_flag   :0x0
+part[7] ro        :0x0
+
+part[8] name      :UDISK
+part[8] classname :DISK
+part[8] addrlo    :0x6c000
+part[8] lenlo     :0x0
+part[8] user_type :0x0
+part[8] keydata   :0x0
+part[8] backup_flag   :0x0
+part[8] ro        :0x0
+
+[2.568]begin to erase flash
+total part: 10
+mbr 0, 8000, 8000
+boot-resource 1, 4000, 8000
+env 2, 8000, 8000
+boot 3, 10000, 8000
+rootfs 4, 20000, 8000
+recovery 5, 10000, 8000
+data 6, 8000, 8000
+data_bak 7, 8000, 8000
+reserved 8, 8000, 8000
+UDISK 9, 0, 0
+[2.591]erase_flag = 0
+[2.593]NB1 : enter phy init
+[2.595]NandHwInit nand had opend
+[2.598]NB1 : nand phy init ok
+[2.601]uboot_start_block 8 uboot_next_block 58.
+[2.605]check nand version start.
+[2.608]Current nand driver version is ff 0 3 1 
+[2.612]Media version is valid in block 8, version info is ff 0 3 1 
+[2.618]nand driver version match ok in block 8.
+[2.623]nand version = 0
+[2.625]has cleared the boot blocks.
+[2.644]NAND_Uboot_Erase
+[2.644]NB1 : enter phy Exit
+[2.644]NandHwExit nand not need to close!
+do need erase flash
+private part exist
+NAND_UbootInit
+[2.644]NAND_UbootInit start
+[2.644]NB1: enter NAND_LogicInit
+[2.647]not burn nand partition table!
+[2.650]NB1: nftl num: 1 
+[2.652]init nftl: 0
+[3.188][NE]not power on gc 654!
+[3.188]NB1: NAND_LogicInit ok, result = 0x0
+[3.188]NAND_UbootInit end: 0x0
+the 0 mbr table is ok
+the 1 mbr table is ok
+the 2 mbr table is ok
+the 3 mbr table is ok
+*************MBR DUMP***************
+total mbr part 9
+
+part[0] name      :boot-resource
+part[0] classname :DISK
+part[0] addrlo    :0x8000
+part[0] lenlo     :0x4000
+part[0] user_type :32768
+part[0] keydata   :0
+part[0] ro        :0
+
+part[1] name      :env
+part[1] classname :DISK
+part[1] addrlo    :0xc000
+part[1] lenlo     :0x8000
+part[1] user_type :32768
+part[1] keydata   :0
+part[1] ro        :0
+
+part[2] name      :boot
+part[2] classname :DISK
+part[2] addrlo    :0x14000
+part[2] lenlo     :0x10000
+part[2] user_type :32768
+part[2] keydata   :0
+part[2] ro        :0
+
+part[3] name      :rootfs
+part[3] classname :DISK
+part[3] addrlo    :0x24000
+part[3] lenlo     :0x20000
+part[3] user_type :32768
+part[3] keydata   :0
+part[3] ro        :0
+
+part[4] name      :recovery
+part[4] classname :DISK
+part[4] addrlo    :0x44000
+part[4] lenlo     :0x10000
+part[4] user_type :32768
+part[4] keydata   :0
+part[4] ro        :0
+
+part[5] name      :data
+part[5] classname :DISK
+part[5] addrlo    :0x54000
+part[5] lenlo     :0x8000
+part[5] user_type :32768
+part[5] keydata   :0
+part[5] ro        :0
+
+part[6] name      :data_bak
+part[6] classname :DISK
+part[6] addrlo    :0x5c000
+part[6] lenlo     :0x8000
+part[6] user_type :32768
+part[6] keydata   :0
+part[6] ro        :0
+
+part[7] name      :reserved
+part[7] classname :DISK
+part[7] addrlo    :0x64000
+part[7] lenlo     :0x8000
+part[7] user_type :32768
+part[7] keydata   :0
+part[7] ro        :0
+
+part[8] name      :UDISK
+part[8] classname :DISK
+part[8] addrlo    :0x6c000
+part[8] lenlo     :0x0
+part[8] user_type :0
+part[8] keydata   :0
+part[8] ro        :0
+
+begin to store data
+part name boot-resource
+keydata = 0x0
+find keypart boot-resource
+keypart read start: 0x8000, sectors 0x4000
+keypart part boot-resource read end: 0x8000, sectors 0x4000
+part name env
+keydata = 0x0
+part name boot
+keydata = 0x0
+part name rootfs
+keydata = 0x0
+part name recovery
+keydata = 0x0
+part name data
+keydata = 0x0
+part name data_bak
+keydata = 0x0
+part name reserved
+keydata = 0x0
+part name UDISK
+keydata = 0x0
+NAND_UbootExit
+[3.732]NB1: NAND_LogicExit
+need_erase_flag = 1
+begin to erase
+[3.738]erase_flag = 1
+[3.740]NB1 : enter phy init
+[3.746]pll6 clock is 600000000 Hz
+[3.746]pll6 clock is 600000000 Hz
+[3.748]pll6 clock is 600000000 Hz
+[3.751]pll6 clock is 600000000 Hz
+[3.754]pll6 clock is 600000000 Hz
+[3.757]pll6 clock is 600000000 Hz
+[3.763]pll6 clock is 600000000 Hz
+[3.763]pll6 clock is 600000000 Hz
+[3.766]uboot: nand version: 3 6023 20201203 17191621 
+[3.771]NB1 : nand phy init ok
+[3.774]erase by flag 1
+[3.776]has cleared the boot blocks.
+[6.448]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.448]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.449]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.449]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.452]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.459]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.465]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.472]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.478]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.485]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[6.491]r b@1536 p@0 fail t@10
+[6.494]find a bad block: 0 1536 0 [6.496]sdata: f5 ac 47 3d 
+[6.499]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.506]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.512]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.519]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.525]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.532]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.538]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.545]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.551]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.558]ecc err!read page, read page end error -2,chip=0 block=1537 page=0
+[6.564]r b@1537 p@0 fail t@10
+[6.567]find a bad block: 0 1537 0 [6.570]sdata: f5 ac 47 3d 
+[7.745]NAND_Uboot_Erase
+[7.745]NB1 : enter phy Exit
+finish erase
+NAND_UbootInit
+[7.745]NAND_UbootInit start
+[7.745]NB1: enter NAND_LogicInit
+[7.745]NandHwInit nand had opend
+[7.745]nand: get CapacityLevel from script, 55aaaa55
+[7.745]burn nand partition table! mbr tbl: 0x4fee6dd0, part_count:10
+[7.749]start block:60
+[7.751][ND]factory FirstBuild 30
+[7.810][ND]erase factory FirstBuild
+[7.810][ND]nand_info->SectorNumsPerPage :0x8
+[7.810][ND]nand_info->PageNumsPerBlk :0x40
+[7.810][ND]nand_info->BlkPerChip :0x400
+[7.810][ND]nand_info->ChipNum :0x1
+[7.810][NE]print partition 0 !
+[7.810][ND]partition->size :-1
+[7.811][ND]partition->cross_talk :0
+[7.814][ND]partition->attribute :0
+[7.817][ND]partition->start.Chip_NO :65535
+[7.821][ND]partition->start.Block_NO :65535
+[7.825][ND]partition->end.Chip_NO :65535
+[7.828][ND]partition->end.Block_NO :65535
+[7.832][ND]partition->nand_disk[0].size :32768
+[7.836][ND]partition->nand_disk[0].type :0
+[7.840][ND]partition->nand_disk[1].size :16384
+[7.844][ND]partition->nand_disk[1].type :0
+[7.848][ND]partition->nand_disk[2].size :32768
+[7.852][ND]partition->nand_disk[2].type :0
+[7.856][ND]partition->nand_disk[3].size :65536
+[7.860][ND]partition->nand_disk[3].type :0
+[7.864][ND]partition->nand_disk[4].size :131072
+[7.868][ND]partition->nand_disk[4].type :0
+[7.872][ND]partition->nand_disk[5].size :65536
+[7.876][ND]partition->nand_disk[5].type :0
+[7.880][ND]partition->nand_disk[6].size :32768
+[7.884][ND]partition->nand_disk[6].type :0
+[7.888][ND]partition->nand_disk[7].size :32768
+[7.892][ND]partition->nand_disk[7].type :0
+[7.896][ND]partition->nand_disk[8].size :32768
+[7.900][ND]partition->nand_disk[8].type :0
+[7.904][ND]partition->nand_disk[9].size :0
+[7.908][ND]partition->nand_disk[9].type :0
+[7.911][ND]partition->nand_disk[10].size :-1
+[7.915][ND]partition->nand_disk[10].type :-1
+[7.919][ND]partition->nand_disk[11].size :-1
+[7.923][ND]partition->nand_disk[11].type :-1
+[7.927][ND]partition->nand_disk[12].size :-1
+[7.931][ND]partition->nand_disk[12].type :-1
+[7.935][ND]partition->nand_disk[13].size :-1
+[7.939][ND]partition->nand_disk[13].type :-1
+[7.943][ND]partition->nand_disk[14].size :-1
+[7.947][ND]partition->nand_disk[14].type :-1
+[7.951][ND]partition->nand_disk[15].size :-1
+[7.955][ND]partition->nand_disk[15].type :-1
+[7.959][ND]partition->nand_disk[16].size :-1
+[7.963][ND]partition->nand_disk[16].type :-1
+[7.967][ND]partition->nand_disk[17].size :-1
+[7.971][ND]partition->nand_disk[17].type :-1
+[7.975][ND]partition->nand_disk[18].size :-1
+[7.979][ND]partition->nand_disk[18].type :-1
+[7.983][ND]partition->nand_disk[19].size :-1
+[7.987][ND]partition->nand_disk[19].type :-1
+[7.991][ND]partition->nand_disk[20].size :-1
+[7.995][ND]partition->nand_disk[20].type :-1
+[7.999][ND]partition->nand_disk[21].size :-1
+[8.003][ND]partition->nand_disk[21].type :-1
+[8.007][ND]partition->nand_disk[22].size :-1
+[8.011][ND]partition->nand_disk[22].type :-1
+[8.015][ND]partition->nand_disk[23].size :-1
+[8.019][ND]partition->nand_disk[23].type :-1
+[8.023][NE]partition_num: 0,size :0xffffffff,cross_talk 0
+[8.028][NE]part mbr size: 0x8000 type: 0
+[8.032][NE]part boot-resource size: 0x4000 type: 0
+[8.036][NE]part env size: 0x8000 type: 0
+[8.040][NE]part boot size: 0x10000 type: 0
+[8.044][NE]part rootfs size: 0x20000 type: 0
+[8.048][NE]part recovery size: 0x10000 type: 0
+[8.052][NE]part data size: 0x8000 type: 0
+[8.056][NE]part data_bak size: 0x8000 type: 0
+[8.060][NE]part reserved size: 0x8000 type: 0
+[8.064][NE]part UDISK size: 0x0 type: 0
+[8.606]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.606]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.606]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.606]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.610]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.616]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.623]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.629]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.636]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.642]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.649]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.655]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.662]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.668]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.675]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.681]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.688]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.694]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.701]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.707]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.714]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.720]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.727]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.733]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.740]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.746]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.753]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.759]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.766]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.772]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.779]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.785]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.792]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.798]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.805]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.811]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.818]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.824]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.831]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.837]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.844]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.850]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.857]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.863]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.870]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.876]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.883]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.889]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.896]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.902]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.909]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.915]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.922]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.928]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.935]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.941]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.948]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.954]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.961]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.967]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.974]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.980]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.987]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[8.993]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.000]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.006]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.013]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.019]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.026]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.032]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.039]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.045]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.052]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.058]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.065]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.071]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.078]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.084]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.091]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.097]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.104]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.110]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.117]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.123]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.130]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.136]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.143]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.149]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.156]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.162]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.169]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.175]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.182]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.188]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.195]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.201]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.208]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.214]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.221]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.227]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.234]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.240]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.247]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.253]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.260]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.266]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.273]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.279]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.286]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.292]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.299]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.305]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.312]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.318]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.325]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.331]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.338]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.344]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.351]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.357]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.364]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.370]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.377]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.383]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.390]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.396]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.403]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.409]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.416]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.422]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.429]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.435]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.442]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.448]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.455]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.461]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.468]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.474]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.481]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.487]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.494]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.500]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.507]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.513]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.520]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.526]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.533]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.539]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.546]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.552]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.559]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.565]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.572]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.578]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.585]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.591]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.598]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.604]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.611]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.617]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.624]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.630]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.637]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.643]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.650]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.656]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.663]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.669]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.676]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.682]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.689]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.695]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.702]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.708]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.715]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.721]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.728]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.734]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.741]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.747]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.754]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.760]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.767]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.773]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.780]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.786]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.793]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.799]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.806]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.812]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.819]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.825]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.832]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.838]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.845]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.851]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.858]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.864]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.871]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.877]ecc err!read page, read page end error -2,chip=0 block=1536 page=0
+[9.884]r b@1536 p@0 fail t@200
+[9.886]find a bad block: 0 1536 0 [9.889]sdata: f5 ac 47 3d 
+[10.078][ND]partition->size :464896
+[10.078][ND]partition->cross_talk :0
+[10.078][ND]partition->attribute :0
+[10.078][ND]partition->start.Chip_NO :0
+[10.078][ND]partition->start.Block_NO :30
+[10.078][ND]partition->end.Chip_NO :0
+[10.078][ND]partition->end.Block_NO :1023
+[10.079][ND]partition->nand_disk[0].size :32768
+[10.084][ND]partition->nand_disk[0].type :0
+[10.088][ND]partition->nand_disk[1].size :16384
+[10.092][ND]partition->nand_disk[1].type :0
+[10.096][ND]partition->nand_disk[2].size :32768
+[10.100][ND]partition->nand_disk[2].type :0
+[10.104][ND]partition->nand_disk[3].size :65536
+[10.108][ND]partition->nand_disk[3].type :0
+[10.112][ND]partition->nand_disk[4].size :131072
+[10.116][ND]partition->nand_disk[4].type :0
+[10.120][ND]partition->nand_disk[5].size :65536
+[10.125][ND]partition->nand_disk[5].type :0
+[10.128][ND]partition->nand_disk[6].size :32768
+[10.133][ND]partition->nand_disk[6].type :0
+[10.137][ND]partition->nand_disk[7].size :32768
+[10.141][ND]partition->nand_disk[7].type :0
+[10.145][ND]partition->nand_disk[8].size :32768
+[10.149][ND]partition->nand_disk[8].type :0
+[10.153][ND]partition->nand_disk[9].size :22528
+[10.157][ND]partition->nand_disk[9].type :0
+[10.161][ND]partition->nand_disk[10].size :-1
+[10.165][ND]partition->nand_disk[10].type :-1
+[10.169][ND]partition->nand_disk[11].size :-1
+[10.173][ND]partition->nand_disk[11].type :-1
+[10.177][ND]partition->nand_disk[12].size :-1
+[10.181][ND]partition->nand_disk[12].type :-1
+[10.185][ND]partition->nand_disk[13].size :-1
+[10.190][ND]partition->nand_disk[13].type :-1
+[10.194][ND]partition->nand_disk[14].size :-1
+[10.198][ND]partition->nand_disk[14].type :-1
+[10.202][ND]partition->nand_disk[15].size :-1
+[10.206][ND]partition->nand_disk[15].type :-1
+[10.210][ND]partition->nand_disk[16].size :-1
+[10.214][ND]partition->nand_disk[16].type :-1
+[10.218][ND]partition->nand_disk[17].size :-1
+[10.222][ND]partition->nand_disk[17].type :-1
+[10.226][ND]partition->nand_disk[18].size :-1
+[10.230][ND]partition->nand_disk[18].type :-1
+[10.234][ND]partition->nand_disk[19].size :-1
+[10.238][ND]partition->nand_disk[19].type :-1
+[10.242][ND]partition->nand_disk[20].size :-1
+[10.247][ND]partition->nand_disk[20].type :-1
+[10.251][ND]partition->nand_disk[21].size :-1
+[10.255][ND]partition->nand_disk[21].type :-1
+[10.259][ND]partition->nand_disk[22].size :-1
+[10.263][ND]partition->nand_disk[22].type :-1
+[10.267][ND]partition->nand_disk[23].size :-1
+[10.271][ND]partition->nand_disk[23].type :-1
+[10.275][ND]phy_partition->PartitionNO :0
+[10.279][ND]phy_partition->SectorNumsPerPage :8
+[10.283][ND]phy_partition->PageNumsPerBlk :64
+[10.287][ND]phy_partition->TotalBlkNum :994
+[10.291][ND]phy_partition->FullBitmapPerPage :8
+[10.295][ND]phy_partition->FreeBlock :0
+[10.299][ND]phy_partition->TotalSectors :464896
+[10.303][ND]phy_partition->StartBlock.Chip_NO :0
+[10.307][ND]phy_partition->StartBlock.Block_NO :30
+[10.312][ND]phy_partition->EndBlock.Chip_NO :0
+[10.316][ND]phy_partition->EndBlock.Block_NO :1023
+[10.321][ND]phy_partition->next_phy_partition :0
+[10.325][ND]phy_partition->PartitionNO 0  FACTORY BAD BLOCK:
+[10.330][ND]BAD Chip:0;Block:768.
+[10.333][ND]phy_partition->PartitionNO 0  NEW BAD BLOCK:
+[10.338][ND]build 1 phy_partition !
+[10.342][ND]factory bad block:0 768!
+[10.345][ND]nand_info->type :0
+[10.348][ND]nand_info->SectorNumsPerPage :8
+[10.351][ND]nand_info->BytesUserData :16
+[10.355][ND]nand_info->PageNumsPerBlk :64
+[10.359][ND]nand_info->BlkPerChip :1024
+[10.362][ND]nand_info->FirstBuild :1
+[10.366][ND]nand_info->FullBitmap :1340341996
+[10.370][ND]nand_info->bad_block_addr.Chip_NO :0
+[10.374][ND]nand_info->bad_block_addr.Block_NO :0
+[10.379][ND]nand_info->mbr_block_addr.Chip_NO :0
+[10.383][ND]nand_info->mbr_block_addr.Block_NO :0
+[10.387][ND]nand_info->no_used_block_addr.Chip_NO :0
+[10.392][ND]nand_info->no_used_block_addr.Block_NO :30
+[10.397][ND]nand_info->new_bad_block_addr.Chip_NO :0
+[10.401][ND]nand_info->new_bad_block_addr.Block_NO :0
+[10.406][ND]nand_info->new_bad_page_addr :65535
+[10.411][ND]nand_info->partition_nums :1
+[10.414][ND]sizeof partition:2384
+[10.417][ND]nand_info->partition:0:
+[10.420][ND]size:0x71800
+[10.423][ND]cross_talk:0x0
+[10.425][ND]attribute:0x0
+[10.427][ND]start: chip:0 block:30
+[10.431][ND]end  : chip:0 block:1023
+[10.434][ND]boot :0x4ada0998
+[10.436][ND]boot->magic :0xaa55a5a5
+[10.440][ND]boot->len :0x8000
+[10.442][ND]boot->no_use_block :0x1e
+[10.446][ND]boot->uboot_start_block :0x8
+[10.449][ND]boot->uboot_next_block :0x3a
+[10.453][ND]boot->logic_start_block :0x1e
+[10.457][ND]mbr len :4096
+[10.459][ND]_PARTITION len :2560
+[10.462][ND]_NAND_STORAGE_INFO len :512
+[10.465][ND]_FACTORY_BLOCK len :2048
+[10.469][ND]nand_partition0
+[10.471][ND]nftl start:994,86
+[10.474][ND]first
+[10.745][ND]bad block: 738
+[10.838][ND]before second 993 908.
+[10.838][ND]all block full!!
+[10.838][ND]get a new free block
+[10.838][ND]free block nums is 992 !
+[10.838][NE]not power on gc 992!
+[10.838][ND]nftl ok!
+[10.838][ND]max_erase_times = 10000
+[10.838][ND]nftl_add ok
+[10.838]NB1: NAND_LogicInit ok, result = 0x0
+[10.842]NAND_UbootInit end: 0x0
+rewrite
+keypart write start: 0x8000, sectors 0x4000
+keypart write end: 0x8000, sectors 0x4000
+flash exit
+nand not need closed
+[12.111]successed in erasing flash
+nand already init
+nand not need closed
+[12.120]begin to download part
+nand already init
+[12.120]begin to download part boot-resource
+partdata hi 0x0
+partdata lo 0x4a3c00
+sparse: bad magic
+[13.054]successed in writting part boot-resource
+origin_verify value = cbefb3eb, active_verify value = cbefb3eb
+[13.443]successed in verify part boot-resource
+[13.443]successed in download part boot-resource
+[13.443]begin to download part env
+partdata hi 0x0
+partdata lo 0x20000
+sparse: bad magic
+[13.470]successed in writting part env
+origin_verify value = b5b8d981, active_verify value = b5b8d981
+[13.485]successed in verify part env
+[13.485]successed in download part env
+[13.485]begin to download part boot
+partdata hi 0x0
+partdata lo 0x46339b
+sparse: bad magic
+[14.363]successed in writting part boot
+origin_verify value = b4cd041f, active_verify value = b4cd041f
+[14.731]successed in verify part boot
+[14.731]successed in download part boot
+[14.731]begin to download part rootfs
+partdata hi 0x0
+partdata lo 0x3200000
+sparse: bad magic
+[24.760]successed in writting part rootfs
+origin_verify value = aede1e39, active_verify value = aede1e39
+[28.915]successed in verify part rootfs
+[28.915]successed in download part rootfs
+[28.915]begin to download part recovery
+partdata hi 0x0
+partdata lo 0x46339b
+sparse: bad magic
+[29.791]successed in writting part recovery
+origin_verify value = b4cd041f, active_verify value = b4cd041f
+[30.159]successed in verify part recovery
+[30.159]successed in download part recovery
+[30.159]begin to download part data
+partdata hi 0x0
+partdata lo 0x800000
+sparse: bad magic
+[31.769]successed in writting part data
+origin_verify value = e7882ecf, active_verify value = e7882ecf
+[32.437]successed in verify part data
+[32.437]successed in download part data
+[32.437]begin to download part data_bak
+partdata hi 0x0
+partdata lo 0x800000
+sparse: bad magic
+[34.033]successed in writting part data_bak
+origin_verify value = e7882ecf, active_verify value = e7882ecf
+[34.701]successed in verify part data_bak
+[34.701]successed in download part data_bak
+NAND_UbootExit
+[34.701]NAND_UbootExit 
+[34.701]NB1: NAND_LogicExit
+[34.702]nand_physic_exit
+[34.702] m0 special exit 
+[34.709]successed in downloading part
+nand not opened
+[34.782]set m0 retry cnt 1
+uboot_pkg magic 0x89119800
+uboot size = 0x1a8000
+storage type = 0
+[34.782]NB1 : enter phy init
+[34.782]nand_physic_init
+[34.786]pll6 clock is 600000000 Hz
+[34.786]pll6 clock is 600000000 Hz
+[34.786]uboot Nand0 clk: 20MHz,PERI=1200,N=4,M=15,T=10
+[34.786]uboot Nand Ecc clk: 20MHz,PERI=1200,N=4,M=15,T=20
+[34.789]pll6 clock is 600000000 Hz
+[34.792]pll6 clock is 600000000 Hz
+[34.795]uboot Nand0 clk: 40MHz,PERI=1200,N=2,M=15,T=20
+[34.800]uboot Nand Ecc clk: 40MHz,PERI=1200,N=2,M=15,T=40
+[34.805]Reset NDFC start 0  0
+[34.808]Reset NDFC end 0  0
+[34.810]channel 0 chip 0: 98 da 90 15 76 16 08 00
+[34.815]nand not support! channel 0 chip 1: 00 00 00 00 00 00 00 00
+[34.821]nand not support! channel 0 chip 2: 00 00 00 00 00 00 00 00
+[34.827]nand not support! channel 0 chip 3: 00 00 00 00 00 00 00 00
+[34.833]nand : get id number_ctl from script:0x55aaaa55
+[34.838]build nand physical connection ok...
+[34.842]CE: [34.843]0 [34.843]
+RB: [34.845]0 [34.846]
+[34.846]pll6 clock is 600000000 Hz
+[34.849]pll6 clock is 600000000 Hz
+[34.855]check scan data, first_check 4 0!
+[34.856]interface change ddr_type:0 sclk0:25 sclk1:50 sdr_edo_bak:1 ddr_edo_bak:1 ddr_delay_bak:0 !
+[34.865]pll6 clock is 600000000 Hz
+[34.868]pll6 clock is 600000000 Hz
+[34.871]uboot Nand0 clk: 50MHz,PERI=1200,N=2,M=12,T=25
+[34.876]uboot Nand Ecc clk: 50MHz,PERI=1200,N=2,M=12,T=50
+[34.881]_get right timing para, set edo to 1 for sdr nand.
+[34.886] m0 special init 
+[34.889]physic_info_read start!!
+[34.892]physic_info_read already!!
+[34.895]==============show_nctri======================
+[34.900]channel_id:            0
+[34.903]type:                  1
+[34.906]chip_cnt:              1
+[34.909]chip_connect_info:     1
+[34.912]rb_connect_info:       1
+[34.914]ce: [34.916]0 [34.916]
+rb: [34.918]0 [34.918]
+[34.919]dma_type:              1
+[34.922]dma_addr:              1255606640
+[34.926]write_wait_rb_before:  0
+[34.929]write_wait_rb_mode:    0
+[34.932]rb_ready_flag:         1
+[34.935]dma_ready_flag:        0
+[34.938]timing ctl: [34.940]0x100 [34.941]
+[34.942]print ndfc reg:
+[34.944]reg_ctl:               0x00000101
+[34.948]reg_sta:               0x00000f01
+[34.951]reg_int:               0x00000000
+[34.955]reg_timing_ctl:        0x00000100
+[34.959]reg_timing_cfg:        0x00010095
+[34.962]reg_addr_low:          0x01000000
+[34.966]reg_addr_high:         0x00000000
+[34.970]reg_byte_cnt:          0x00000001
+[34.974]reg_cmd:               0x81ec0000
+[34.977]reg_read_cmd_set:      0x00e00530
+[34.981]reg_write_cmd_set:     0x00008510
+[34.985]reg_io:                0x00008510
+[34.989]reg_ecc_ctl:           0x4a800308
+[34.992]reg_ecc_sta:           0x00000000
+[34.996]reg_debug:             0x00000100
+[35.000]reg_err_cnt0:          0x00000000
+[35.003]reg_err_cnt1:          0x00000000
+[35.007]reg_err_cnt2:          0x00000000
+[35.011]reg_err_cnt3:          0x00000000
+[35.015]reg_user_data_base:    0x00000000
+[35.018]reg_efnand_sta:        0x00000000
+[35.022]reg_spare_area:        0x00000800
+[35.026]reg_pat_id:            0x00000000
+[35.029]reg_dma_cnt:           0x00000000
+[35.033]reg_ram0_base:         0x4fe4b238
+[35.037]reg_ram1_base:         0x00000000
+[35.041]reg_dma_sta:           0x02000000
+[35.044]==============show_nctri end======================
+[35.050]==============show_nci======================
+[35.054]id: [35.055]98 [35.056]da [35.057]90 [35.058]15 [35.059]76 [35.060]ff [35.061]ff [35.062]ff [35.063]
+[35.064]chip_no:                   0
+[35.067]nctri_chip_no:             0
+[35.070]driver_no:                 0
+[35.074]blk_cnt_per_chip:          2048
+[35.077]sector_cnt_per_page:       4
+[35.081]page_cnt_per_blk:          64
+[35.084]page_offset_for_next_blk:  64
+[35.087]randomizer:                1
+[35.091]read_retry:                0
+[35.094]interface_type:            0
+[35.097]timing_mode:               2
+[35.100]support_change_onfi_timing_mode:  0
+[35.104]support_ddr2_specific_cfg:        0
+[35.108]support_io_driver_strength:       0
+[35.112]support_vendor_specific_cfg:      0
+[35.116]support_onfi_sync_reset:   0
+[35.119]support_toggle_only:       0
+[35.123]frequency:                 25
+[35.126]ecc_mode:                  3
+[35.129]max_erase_times:           10000
+[35.133]page_addr_bytes:           0
+[35.136]sdata_bytes_per_page:      8
+[35.140]nsci chip_no:              0x00000000
+[35.144]nctri channel_id:          0x00000000
+[35.148]multi_plane_read_cmd0:     0x00000000
+[35.152]multi_plane_read_cmd1:     0x00000030
+[35.156]multi_plane_write_cmd0:    0x00000011
+[35.160]multi_plane_write_cmd1:    0x00000081
+[35.164]bad_block_flag_position:   0x00000002
+[35.168]multi_plane_block_offset:  0x00000001
+[35.172]id_number:                 0x0002001b
+[35.176]================show_nsi====================
+[35.181]chip_cnt:      1
+[35.183]block_nums:    0
+[35.185]================show_nssi====================
+[35.190]super_chip_cnt:      1
+[35.193]super_block_nums:    0
+[35.196]support_two_plane:   1
+[35.198]support_v_interleave:0
+[35.201]support_dual_channel:0
+[35.204]=================show_nsci===================
+[35.209]chip_no:                       0
+[35.212]blk_cnt_per_super_chip:        1024
+[35.216]sector_cnt_per_super_page:     8
+[35.220]page_cnt_per_super_blk:        64
+[35.224]page_offset_for_next_super_blk:64
+[35.227]spare_bytes:                   16
+[35.231]two_plane:                     1
+[35.235]channel_num:                   1
+[35.238]vertical_interleave:           0
+[35.242]dual_channel:                  0
+[35.246]driver_no:                     0
+[35.249]nci_first:                     0 0
+[35.253]uboot: nand version: 3 6023 20201203 17191621 
+[35.258]nand_physic_init end
+[35.261]nand secure storage ok: 58,59
+[35.264]NandHwInit end
+[35.266]NB1 : nand phy init ok
+[35.269]burn uboot one!
+[35.271]burn uboot in many block 0!
+[35.277]write uboot many block 8!
+[35.308]write uboot many block 9!
+[35.339]write uboot many block 10!
+[35.369]write uboot many block 11!
+[35.400]write uboot many block 12!
+[35.430]write uboot many block 13!
+[35.461]write uboot many block 14!
+[35.492]write uboot many block 15!
+[35.522]write uboot many block 16!
+[35.553]write uboot many block 17!
+[35.584]write uboot many block 18!
+[35.615]write uboot many block 19!
+[35.645]write uboot many block 20!
+[35.676]write uboot many block 21!
+[35.683]uboot info: page 16 in block 21.
+[35.683]uboot info: page 17 in block 21.
+[35.684]uboot info: page 18 in block 21.
+[35.684]uboot info: page 19 in block 21.
+[35.685]uboot info: page 20 in block 21.
+[35.685]uboot info: page 21 in block 21.
+[35.686]uboot info: page 22 in block 21.
+[35.686]uboot info: page 23 in block 21.
+[35.690]uboot info: page 24 in block 21.
+[35.694]uboot info: page 25 in block 21.
+[35.697]uboot info: page 26 in block 21.
+[35.701]uboot info: page 27 in block 21.
+[35.705]uboot info: page 28 in block 21.
+[35.708]uboot info: page 29 in block 21.
+[35.712]uboot info: page 30 in block 21.
+[35.716]uboot info: page 31 in block 21.
+[35.733]burn uboot one!
+[35.734]burn uboot in many block 1!
+[35.740]write uboot many block 22!
+[35.771]write uboot many block 23!
+[35.801]write uboot many block 24!
+[35.832]write uboot many block 25!
+[35.862]write uboot many block 26!
+[35.893]write uboot many block 27!
+[35.923]write uboot many block 28!
+[35.954]write uboot many block 29!
+[35.985]write uboot many block 30!
+[36.016]write uboot many block 31!
+[36.046]write uboot many block 32!
+[36.077]write uboot many block 33!
+[36.107]write uboot many block 34!
+[36.138]write uboot many block 35!
+[36.145]uboot info: page 16 in block 35.
+[36.146]uboot info: page 17 in block 35.
+[36.146]uboot info: page 18 in block 35.
+[36.146]uboot info: page 19 in block 35.
+[36.147]uboot info: page 20 in block 35.
+[36.147]uboot info: page 21 in block 35.
+[36.148]uboot info: page 22 in block 35.
+[36.149]uboot info: page 23 in block 35.
+[36.152]uboot info: page 24 in block 35.
+[36.156]uboot info: page 25 in block 35.
+[36.160]uboot info: page 26 in block 35.
+[36.163]uboot info: page 27 in block 35.
+[36.167]uboot info: page 28 in block 35.
+[36.171]uboot info: page 29 in block 35.
+[36.174]uboot info: page 30 in block 35.
+[36.178]uboot info: page 31 in block 35.
+[36.196]burn uboot one!
+[36.196]burn uboot in many block 2!
+[36.206]write uboot many block 36!
+[36.237]write uboot many block 37!
+[36.267]write uboot many block 38!
+[36.298]write uboot many block 39!
+[36.328]write uboot many block 40!
+[36.359]write uboot many block 41!
+[36.390]write uboot many block 42!
+[36.421]write uboot many block 43!
+[36.451]write uboot many block 44!
+[36.482]write uboot many block 45!
+[36.513]write uboot many block 46!
+[36.543]write uboot many block 47!
+[36.574]write uboot many block 48!
+[36.604]write uboot many block 49!
+[36.611]uboot info: page 16 in block 49.
+[36.612]uboot info: page 17 in block 49.
+[36.612]uboot info: page 18 in block 49.
+[36.613]uboot info: page 19 in block 49.
+[36.613]uboot info: page 20 in block 49.
+[36.614]uboot info: page 21 in block 49.
+[36.614]uboot info: page 22 in block 49.
+[36.615]uboot info: page 23 in block 49.
+[36.618]uboot info: page 24 in block 49.
+[36.622]uboot info: page 25 in block 49.
+[36.626]uboot info: page 26 in block 49.
+[36.629]uboot info: page 27 in block 49.
+[36.633]uboot info: page 28 in block 49.
+[36.637]uboot info: page 29 in block 49.
+[36.640]uboot info: page 30 in block 49.
+[36.644]uboot info: page 31 in block 49.
+[36.662]burn uboot one!
+[36.662]burn uboot in many block 3!
+[36.674]burn uboot one!
+[36.674]burn uboot in many block 4!
+[36.690]burn uboot one!
+[36.690]burn uboot in many block 5!
+[36.705]burn uboot one!
+[36.705]burn uboot in many block 6!
+[36.720]burn uboot one!
+[36.720]burn uboot in many block 7!
+[36.736]burn uboot one!
+[36.736]burn uboot in many block 8!
+[36.751]burn uboot one!
+[36.751]burn uboot in many block 9!
+[36.767]burn uboot one!
+[36.767]burn uboot in many block 10!
+[36.782]burn uboot one!
+[36.782]burn uboot in many block 11!
+[36.797]burn uboot one!
+[36.797]burn uboot in many block 12!
+[36.813]burn uboot one!
+[36.813]burn uboot in many block 13!
+[36.828]burn uboot one!
+[36.828]burn uboot in many block 14!
+[36.843]burn uboot one!
+[36.843]burn uboot in many block 15!
+[36.859]burn uboot one!
+[36.859]burn uboot in many block 16!
+[36.874]burn uboot one!
+[36.874]burn uboot in many block 17!
+[36.890]burn uboot one!
+[36.890]burn uboot in many block 18!
+[36.905]burn uboot one!
+[36.905]burn uboot in many block 19!
+[36.920]burn uboot one!
+[36.920]burn uboot in many block 20!
+[36.936]burn uboot one!
+[36.936]burn uboot in many block 21!
+[36.951]burn uboot one!
+[36.951]burn uboot in many block 22!
+[36.966]burn uboot one!
+[36.966]burn uboot in many block 23!
+[36.982]burn uboot one!
+[36.982]burn uboot in many block 24!
+[36.997]burn uboot one!
+[36.997]burn uboot in many block 25!
+[37.012]burn uboot one!
+[37.013]burn uboot in many block 26!
+[37.028]burn uboot one!
+[37.028]burn uboot in many block 27!
+[37.043]burn uboot one!
+[37.043]burn uboot in many block 28!
+[37.059]burn uboot one!
+[37.059]burn uboot in many block 29!
+[37.074]burn uboot one!
+[37.074]burn uboot in many block 30!
+[37.089]burn uboot one!
+[37.089]burn uboot in many block 31!
+[37.105]burn uboot one!
+[37.105]burn uboot in many block 32!
+[37.120]burn uboot one!
+[37.120]burn uboot in many block 33!
+[37.135]burn uboot one!
+[37.135]burn uboot in many block 34!
+[37.151]burn uboot one!
+[37.151]burn uboot in many block 35!
+[37.166]burn uboot one!
+[37.166]burn uboot in many block 36!
+[37.182]burn uboot one!
+[37.182]burn uboot in many block 37!
+[37.197]burn uboot one!
+[37.197]burn uboot in many block 38!
+[37.212]burn uboot one!
+[37.212]burn uboot in many block 39!
+[37.228]burn uboot one!
+[37.228]burn uboot in many block 40!
+[37.243]burn uboot one!
+[37.243]burn uboot in many block 41!
+[37.258]burn uboot one!
+[37.258]burn uboot in many block 42!
+[37.274]burn uboot one!
+[37.274]burn uboot in many block 43!
+[37.289]burn uboot one!
+[37.289]burn uboot in many block 44!
+[37.305]burn uboot one!
+[37.305]burn uboot in many block 45!
+[37.320]burn uboot one!
+[37.320]burn uboot in many block 46!
+[37.335]burn uboot one!
+[37.335]burn uboot in many block 47!
+[37.351]burn uboot one!
+[37.351]burn uboot in many block 48!
+[37.366]burn uboot one!
+[37.366]burn uboot in many block 49!
+[37.381]NB1 : enter phy Exit
+[37.381]NandHwExit nand not need to close!
+sunxi_sprite_deal_uboot ok
+[37.381]successed in downloading uboot
+[37.384]set m0 retry cnt 1
+[37.384]uboot_start_block:    8
+[37.384]uboot_next_block:   3a
+[37.384]logic_start_block:1e
+[37.384]nand_specialinfo_page:0
+[37.385]nand_specialinfo_offset:    0
+[37.388]physic_block_reserved:    6
+[37.392]NAND_GetParam_store 0x98 0xda 0x90 0x15 0x76
+dram para[0] = 2a0
+dram para[1] = 3
+dram para[2] = 3b3bfb
+dram para[3] = 1
+dram para[4] = 30ea
+dram para[5] = 1000001
+dram para[6] = 1c70
+dram para[7] = 40
+dram para[8] = 18
+dram para[9] = 0
+dram para[10] = 0
+dram para[11] = 400
+dram para[12] = 848
+dram para[13] = 1248a192
+dram para[14] = 11b1b18d
+dram para[15] = 676051
+dram para[16] = 78787896
+dram para[17] = 0
+dram para[18] = 0
+dram para[19] = 9090900
+dram para[20] = 1e08a1e0
+dram para[21] = 0
+dram para[22] = 0
+dram para[23] = 80000000
+dram para[24] = 0
+dram para[25] = 1212
+dram para[26] = 6003
+dram para[27] = 0
+dram para[28] = 0
+dram para[29] = 0
+dram para[30] = 0
+dram para[31] = 0
+storage type = 0
+[37.456]NB1 : enter phy init
+[37.459]NandHwInit nand had opend
+[37.462]NB1 : nand phy init ok
+[37.465]burn boot0 normal mode!
+[37.468]m0 write boot0 one 
+[37.470]burn_boot0_1k mode!
+[37.473]boot0 count 0!
+[37.527]m0 write boot0 one 
+[37.527]burn_boot0_1k mode!
+[37.527]boot0 count 1!
+[37.580]m0 write boot0 one 
+[37.580]burn_boot0_1k mode!
+[37.580]boot0 count 2!
+[37.633]m0 write boot0 one 
+[37.633]burn_boot0_1k mode!
+[37.633]boot0 count 3!
+[37.686]m0 write boot0 one 
+[37.686]burn_boot0_1k mode!
+[37.686]m0 write boot0 one 
+[37.686]burn_boot0_1k mode!
+[37.686]m0 write boot0 one 
+[37.686]burn_boot0_1k mode!
+[37.686]m0 write boot0 one 
+[37.686]burn_boot0_1k mode!
+[37.686]NB1 : enter phy Exit
+[37.686]NandHwExit nand not need to close!
+[37.690]successed in downloading boot0
+boot ui char: not enough space to printf
+[37.697]sprite success 
+next work 3
+SUNXI_UPDATE_NEXT_ACTION_SHUTDOWN
+set next system normal
+drv_disp_exit
+[40.700][mmc]: mmc exit start
+[40.710][mmc]: read op condition failed
+[40.710][mmc]: mmc send op cond failed
+[40.711][mmc]: read op condition failed
+[40.711][mmc]: mmc send op cond failed
+[40.711][mmc]: mmc card did not respond to voltage select!
+[40.711][mmc]: mmc 2 exit failed
+nand not opened
+[40.712]power off
+set power off vol to default

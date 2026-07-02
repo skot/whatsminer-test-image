@@ -1,0 +1,596 @@
+[358]HELLO! BOOT0 is starting!
+[362]boot0 commit : 5eace7f33ff99d9692d5845581e67a7b334623cf
+ 
+[648]axp read error
+[650]set pll start
+[653]set pll end
+[655]rtc[0] value = 0x00000000
+[658]rtc[1] value = 0x00000000
+[661]rtc[2] value = 0x00000000
+[664]rtc[3] value = 0x00000000
+[667]rtc[4] value = 0x00000000
+[670]rtc[5] value = 0x00000000
+[673]DRAM VERSION IS V2_7
+[676]DRAM CLK =672 MHZ
+[678]DRAM Type =3 (3:DDR3,4:DDR4,6:LPDDR2,7:LPDDR3)
+[683]DRAM zq value: 003b3bfb
+[690]IPRD=007e007e--PGCR0=00000f7d--PLL=b0003700
+[695]Actual DRAM SIZE =256 M
+[698]DRAM SIZE =256 M,para1 = 000030ea,para2 = 01000001
+[710]DRAM simple test OK.
+[712]dram size =256
+[715]boot0 Nand0 clk: 10MHz,PERI=1200,N=8,M=15,T=10
+[720]boot0 Nand Ecc clk: 20MHz,PERI=1200,N=4,M=15,T=20
+[726]NB0 : nand phy init ok
+[728]block from 4 to 57
+[732]nand block 4 is bad
+[735]nand block 5 is bad
+[738]nand block 6 is bad
+[741]nand block 7 is bad
+[745]current block is 8 and last block is 57.
+[790]current block is 9 and last block is 57.
+[835]current block is 10 and last block is 57.
+[881]current block is 11 and last block is 57.
+[927]current block is 12 and last block is 57.
+[972]current block is 13 and last block is 57.
+[1018]current block is 14 and last block is 57.
+[1063]current block is 15 and last block is 57.
+[1109]current block is 16 and last block is 57.
+[1155]current block is 17 and last block is 57.
+[1200]current block is 18 and last block is 57.
+[1246]current block is 19 and last block is 57.
+[1292]current block is 20 and last block is 57.
+[1337]current block is 21 and last block is 57.
+[1422]The file stored in start block %u is perfect.
+[1427]Entry_name        = u-boot
+[1444]Entry_name        = parameter
+[1448]Entry_name        = monitor
+[1452]Entry_name        = scp
+[1465]set arisc reset to de-assert state
+[1469]Entry_name        = soc-cfg
+[1473]Entry_name        = dtb
+[1477]Entry_name        = logo
+[1480]Ready to disable icache.
+[1483]Jump to secend Boot.
+INFO:    Configuring SPC Controller
+NOTICE:  BL3-1: v1.0(debug):c5e8aec
+NOTICE:  BL3-1: Built : 14:42:22, Apr 26 2018
+NOTICE:  BL3-1 commit: c5e8aec20ca8c6ce31078c5689cbdb1a7352c813
+
+INFO:    BL3-1: Initializing runtime services
+ERROR:   Error initializing runtime service tspd_fast
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address = 0x4a000000
+INFO:    BL3-1: Next image spsr = 0x1d3
+
+
+U-Boot 2014.07 (Jan 17 2022 - 06:31:46) Allwinner Technology 
+
+uboot commit : 349d9856db5631d99dc8c6f43b7c824155300ef9
+ 
+secure enable bit: 0
+normal mode: with secure monitor
+I2C:   ready
+[1.532]pmbus:   ready
+u0:d0006984
+[1.537][ARISC] :arisc initialize
+[1.566][ARISC] :arisc para ok
+[SCP] :sunxi-arisc driver begin startup 2
+[SCP] :arisc version: []
+[SCP] :sunxi-arisc driver v1.10 is starting
+[1.580][ARISC] :sunxi-arisc driver startup succeeded
+set pc_bias(1) bias:1800
+set pg_bias(5) bias:1800
+probe axp is dummy
+[1.581]PMU: cpux 1320 Mhz,AXI=440 Mhz
+PLL6=600 Mhz,AHB1=200 Mhz, APB1=100Mhz MBus=400Mhz
+DRAM:  256 MiB
+[1.583]fdt addr: 0x49cbc620
+[1.583]gd->fdt_size: 0x21c20
+Relocation Offset is: 05d68000
+axp: get node[charger0] error
+gic: sec monitor mode
+[box standby] not used
+ir boot recovery not used
+[1.666][key recovery] no use
+workmode = 0,storage type = 0
+[1.667]NAND: NAND_UbootInit
+[1.667]NAND_UbootInit start
+[1.667]NB1: enter NAND_LogicInit
+[1.671]pll6 clock is 600000000 Hz
+[1.671]pll6 clock is 600000000 Hz
+[1.672]pll6 clock is 600000000 Hz
+[1.675]pll6 clock is 600000000 Hz
+[1.678]pll6 clock is 600000000 Hz
+[1.681]pll6 clock is 600000000 Hz
+[1.684]pll6 clock is 600000000 Hz
+[1.687]pll6 clock is 600000000 Hz
+[1.697]uboot: nand version: 3 6023 20201203 17191621 
+[1.697]not burn nand partition table!
+[1.698]NB1: nftl num: 1 
+[1.701]init nftl: 0
+[2.156][NE]not power on gc 654!
+[2.156]NB1: NAND_LogicInit ok, result = 0x0
+[2.156]NAND_UbootInit end: 0x0
+[2.156]sunxi flash init ok
+used mbr [0], count = 9
+[2.157]start
+drv_disp_init
+init_clocks: finish init_clocks.
+[2.165]HDMI 2.0 driver init start!
+__clk_enable: clk is null.
+[2.168]hdmi cec clk enable failed!
+[2.168]enable ddc_scl pin
+[2.168]enable ddc_sda pin
+[2.168]enable hmid cec pin
+pwm_request: reg = 0x300a000. pwm = 1.
+request pwm success, pwm = 1.
+speed=200000, slave=16
+drv_disp_init finish
+hdmi hdcp not enable!
+hdmi hpd out, force open?
+save_int_to_kernel disp.init_disp(0x20b040a) code:<no error>
+invalid display config
+save disp device failed
+size=0x384000, ram_size=0x10000000, FRAME_BUFFER_SIZE=0x1000000
+[2.485]end
+[2.485]try to burn key
+--------fastboot partitions--------
+-total partitions:9-
+-name-        -start-       -size-      
+boot-resource: 1000000       800000      
+env         : 1800000       1000000     
+boot        : 2800000       2000000     
+rootfs      : 4800000       4000000     
+recovery    : 8800000       2000000     
+data        : a800000       1000000     
+data_bak    : b800000       1000000     
+reserved    : c800000       1000000     
+UDISK       : d800000       0           
+-----------------------------------
+[2.529][mmc]: MMC Device 2 not found
+[2.532]base bootcmd=run setargs_nand boot_normal
+[2.536]bootcmd set setargs_nand
+no misc partition is found
+[2.542]to be run cmd=run setargs_nand boot_normal
+read mac from efuse failed
+[2.548]nand_secure_storage_read item = 0, len = 4096, pages_cnt_per_item = 2, blk = 58, blk_bak = 59
+no item name isolcpus in the map
+sunxi storage read fail
+name in map mac
+[2.564]nand_secure_storage_read item = 1, len = 4096, pages_cnt_per_item = 2, blk = 58, blk_bak = 59
+no item name mac1 in the map
+sunxi storage read fail
+no item name wifi_mac in the map
+sunxi storage read fail
+no item name bt_mac in the map
+sunxi storage read fail
+no item name selinux in the map
+sunxi storage read fail
+no item name specialstr in the map
+sunxi storage read fail
+check user data form private
+[2.603]update dtb dram start
+[2.604]update dtb dram  end
+serial is: 9c000142515860721d51
+PowerBus = 0( 2:vBus 3:acBus other: not exist)
+no battery exist
+sunxi_bmp_logo_display
+[boot disp] can not find the partition Reserve0
+bmp_name=bootlogo.bmp
+reading bootlogo.bmp
+3686456 bytes read in 293 ms (12 MiB/s)
+save_string_to_kernel disp.boot_fb0(4f000000,500,2d0,20,1400,0,0,500,2d0). ret-code:FDT_ERR_BADOFFSET
+[2.920]show bmp on ok
+Net:   phy_mode=rmii, phy_interface=5
+use_ephy25m is unknown.
+eth0
+Warning: failed to set MAC address
+
+[2.928]inter uboot shell
+Checking...
+reading debugmode
+** Unable to read file debugmode **
+no item name debugmode in the map
+sunxi storage read fail
+no item name mac1 in the map
+sunxi storage read fail
+name in map mac
+[2.937]nand_secure_storage_read item = 1, len = 4096, pages_cnt_per_item = 2, blk = 58, blk_bak = 59
+saveenv storage_type = 0
+ˇ˛......Ä.....¿Ç.G.úXQB.Q.r`....................ˇ˛......Ä.....¿Ç.G.úXQB.Q.r`....................ˇ˛......Ä.....¿Ç.G.úXQB.Q.r`....................Bˆ_÷ˆ†ﬂÚœﬂk»   0.295426] console [ttyS0] enabled
+[    0.295426] console [ttyS0] enabled
+[    0.299498] bootconsole [earlycon0] disabled
+[    0.299498] bootconsole [earlycon0] disabled
+[    0.308563] uart uart1: get regulator failed
+[    0.316770] uart uart1: dummy supplies not allowed
+[    0.322137] uart uart1: get regulator by dt way failed!
+[    0.328132] uart1: ttyS1 at MMIO 0x5000400 (irq = 213, base_baud = 12000000) is a SUNXI
+[    0.337603] uart uart2: get regulator failed
+[    0.342432] uart uart2: dummy supplies not allowed
+[    0.347782] uart uart2: get regulator by dt way failed!
+[    0.353756] uart2: ttyS2 at MMIO 0x5000800 (irq = 214, base_baud = 12000000) is a SUNXI
+[    0.363200] uart uart3: get regulator failed
+[    0.367985] uart uart3: dummy supplies not allowed
+[    0.373384] uart uart3: get regulator by dt way failed!
+[    0.379323] uart3: ttyS3 at MMIO 0x5000c00 (irq = 215, base_baud = 12000000) is a SUNXI
+[    0.388970] acx00_init_work,l:139
+[    0.393003] misc dump reg init
+[    0.396727] Unable to detect cache hierarchy for CPU 0
+[    0.476600] brd: module loaded
+[    0.515189] loop: module loaded
+[    0.518758] [NAND]nand comperaliti: allwinner,sun50iw6-nand
+[    0.530029] [NAND]nand init start
+[    0.540921] kernel: nand version: 3 6023 20201203 17115721
+[    1.548876] [NE]not power on gc 653!
+[    1.553891]  nanda:
+[    1.562274] [NAND]nand init end
+[    1.571334] sid_efuse_key_is_readable()774 - The key oem write protect bit not burned!
+[    1.581842] libphy: Fixed MDIO Bus: probed
+[    1.587438] gmac-power1: NULL
+[    1.590765] gmac-power2: NULL
+[    1.594880] PPP generic driver version 2.4.2
+[    1.599990] PPP BSD Compression module registered
+[    1.605343] PPP Deflate Compression module registered
+[    1.611051] PPP MPPE Compression module registered
+[    1.616401] NET: Registered protocol family 24
+[    1.621391] PPTP driver version 0.8.5
+[    1.625852] i2c /dev entries driver
+[    1.639943] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x40)
+[    1.649342] cht8305: probe of 1-0040 failed with error -70
+[    1.655939] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x48)
+[    1.665605] lm75: probe of 0-0048 failed with error -70
+[    1.671706] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x49)
+[    1.681123] lm75: probe of 0-0049 failed with error -70
+[    1.687225] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4a)
+[    1.696637] lm75: probe of 0-004a failed with error -70
+[    1.702722] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4b)
+[    1.712128] lm75: probe of 0-004b failed with error -70
+[    1.719020] lm75 1-004f: hwmon4: sensor 'lm75'
+[    1.724294] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4f)
+[    1.733910] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x48)
+[    1.743491] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x49)
+[    1.753056] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4a)
+[    1.762626] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4b)
+[    1.772191] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4c)
+[    1.781757] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4d)
+[    1.791309] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4e)
+[    1.800810] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x48)
+[    1.810300] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x49)
+[    1.819794] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4a)
+[    1.829361] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4b)
+[    1.838851] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4c)
+[    1.848341] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4d)
+[    1.857830] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4e)
+[    1.867319] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4f)
+[    1.876836] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4c)
+[    1.886295] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4c)
+[    1.895614] tmp421 0-004c: Could not read configuration register (-70)
+[    1.902902] tmp421: probe of 0-004c failed with error -70
+[    1.909108] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4d)
+[    1.918571] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4d)
+[    1.927894] tmp421 0-004d: Could not read configuration register (-70)
+[    1.935182] tmp421: probe of 0-004d failed with error -70
+[    1.941391] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4e)
+[    1.950852] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4e)
+[    1.960169] tmp421 0-004e: Could not read configuration register (-70)
+[    1.967453] tmp421: probe of 0-004e failed with error -70
+[    1.973711] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x2a)
+[    1.983238] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x4f)
+[    1.992822] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2a)
+[    2.002387] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4c)
+[    2.011957] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4d)
+[    2.021523] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4e)
+[    2.031035] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x2a)
+[    2.040525] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4c)
+[    2.050018] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4d)
+[    2.059509] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4e)
+[    2.068998] sunxi_i2c_do_xfer()1935 - [i2c3] incomplete xfer (status: 0x20, dev addr: 0x4f)
+[    2.078880] sunxi-wdt 30090a0.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+[    2.088357] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    2.099466] sunxi_cpufreq_init: support more opp_table and soc bin is 1
+[    2.106910] [cpu_freq] ERR: DEBUG: get cpu 0 device
+[    2.112412] [cpu_freq] ERR: Unable to get regulator
+[    2.126277] sunxi-mmc: probe of sdc0 failed with error -1
+[    2.136737] Use CPUS hardware PWM for fan
+[    2.141427] ==============keepalive_model_init============
+[    2.147896] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x55)
+[    2.157351] general_power_i2c_read: write reg error, ret:-70 !
+[    2.163888] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x55)
+[    2.173416] general_power_i2c_read: write reg error, ret:-70 !
+[    2.179949] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x55)
+[    2.189452] general_power_i2c_read: write reg error, ret:-70 !
+[    2.195983] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x55)
+[    2.205470] general_power_i2c_read: write reg error, ret:-70 !general_power_read: failed to read reg: 0x83
+[    2.216220] general_power_probe: read power vender error, ret: -1
+[    2.222991] general_power_probe: probe failed !
+[    2.228041] general_power: probe of 1-0055 failed with error -1
+[    2.234999] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.254197] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.274195] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.294197] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.314196] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.334196] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.354196] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.374196] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.394196] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.414196] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.433967] p6_init_client failed status = 0xffffffff
+[    2.439812] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.449327] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.458842] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.468359] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.477875] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.487386] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.496904] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.506418] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.515936] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.525449] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.534968] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.544482] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.554005] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.563529] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.573044] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.582562] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.592099] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.601613] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.611132] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x2c)
+[    2.620645] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x48, dev addr: 0x2c)
+[    2.629937] start:0 cmd:3f000000 data:00000077 pass:0 finish:0 success_count:1 retry_count:10:0 fail_count:0
+[    2.640671] p6-power: probe of 1-002c failed with error -1
+[    2.647226] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.656536] i2c_read_bytes 1 failed addr: 28 ret = -70
+[    2.662420] random: fast init done
+[    2.666213] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.675674] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.685127] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.694579] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.703881] i2c_read_bytes 1 failed addr: 28 ret = -70
+[    2.709766] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.719210] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.728648] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.738086] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.747376] i2c_read_bytes 1 failed addr: 28 ret = -70
+[    2.753260] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.762699] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.772140] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    2.781620] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.790909] i2c_read_bytes 1 failed addr: 50 ret = -70
+[    2.796793] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.806232] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.815673] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.825106] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.834397] i2c_read_bytes 1 failed addr: 50 ret = -70
+[    2.840280] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.849743] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.859187] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.868620] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.877913] i2c_read_bytes 1 failed addr: 50 ret = -70
+[    2.883796] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.893235] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.902674] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    2.912154] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    2.921441] i2c_read_bytes 1 failed addr: 51 ret = -70
+[    2.927329] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    2.936768] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    2.946206] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    2.955643] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    2.964934] i2c_read_bytes 1 failed addr: 51 ret = -70
+[    2.970815] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    2.980259] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    2.989695] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    2.999137] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    3.008429] i2c_read_bytes 1 failed addr: 51 ret = -70
+[    3.014312] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    3.023751] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    3.033196] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    3.042672] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.051959] i2c_read_bytes 1 failed addr: 52 ret = -70
+[    3.057846] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.067293] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.076731] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.086169] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.095455] i2c_read_bytes 1 failed addr: 52 ret = -70
+[    3.101345] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.110803] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.120241] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.129683] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.138967] i2c_read_bytes 1 failed addr: 52 ret = -70
+[    3.144855] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.154300] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.163736] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    3.173213] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.182499] i2c_read_bytes 1 failed addr: 53 ret = -70
+[    3.188386] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.197826] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.207270] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.216703] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.225992] i2c_read_bytes 1 failed addr: 53 ret = -70
+[    3.231874] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.241313] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.250750] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.260190] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.269475] i2c_read_bytes 1 failed addr: 53 ret = -70
+[    3.275362] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.284806] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.294245] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    3.303754] antivirus_model_init: version = 20211110
+[    3.309298] antivirus_sys_init
+[    3.312805] u32 classifier
+[    3.315829]     Actions configured
+[    3.319615] Netfilter messages via NETLINK v0.30.
+[    3.324869] nfnl_acct: registering with nfnetlink.
+[    3.330322] nf_conntrack version 0.5.0 (2048 buckets, 8192 max)
+[    3.337047] ctnetlink v0.93: registering with nfnetlink.
+[    3.343158] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    3.349800] gre: GRE over IPv4 demultiplexor driver
+[    3.355306] ip_gre: GRE over IPv4 tunneling driver
+[    3.361735] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.367835] Initializing XFRM netlink socket
+[    3.372609] NET: Registered protocol family 17
+[    3.377587] NET: Registered protocol family 15
+[    3.382601] l2tp_core: L2TP core driver, V2.0
+[    3.387446] l2tp_ip: L2TP IP encapsulation support (L2TPv3)
+[    3.393699] l2tp_netlink: L2TP netlink interface
+[    3.398875] l2tp_eth: L2TP ethernet pseudowire support (L2TPv3)
+[    3.407031] sid_efuse_key_is_readable()774 - The key thermal_sensor write protect bit not burned!
+[    3.418743] --------------pmbus_power_probe-----------
+[    3.424878] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x57)
+[    3.434188] pmbus-power 1-0057: Failed to get PMBUS_COMMON_ID
+[    3.440586] pmbus power init error times 1.
+[    3.550199] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x57)
+[    3.559493] pmbus-power 1-0057: Failed to get PMBUS_COMMON_ID
+[    3.565879] pmbus power init error times 2.
+[    3.677980] pmbus-power: probe of 1-0057 failed with error -1
+[    3.684412] --------------pmbus_power_probe-----------
+[    3.690357] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x58)
+[    3.699645] pmbus-power 1-0058: Failed to get PMBUS_COMMON_ID
+[    3.706035] pmbus power init error times 1.
+[    3.818198] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x58)
+[    3.827484] pmbus-power 1-0058: Failed to get PMBUS_COMMON_ID
+[    3.833874] pmbus power init error times 2.
+[    3.946076] pmbus_power_probe probe failed (vendor: 0x0, name: unknow)
+[    4.401781] registered taskstats version 1
+[    4.413417] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    4.424411] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    4.435370] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    4.446203] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    4.457157] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    4.468106] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x50)
+[    4.479088] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    4.490031] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    4.500965] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x51)
+[    4.511952] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    4.522890] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    4.533824] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x52)
+[    4.544805] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    4.555742] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    4.566685] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x53)
+[    4.577664] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x54)
+[    4.588599] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x54)
+[    4.599536] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x54)
+[    4.610529] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x55)
+[    4.621465] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x55)
+[    4.632404] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x55)
+[    4.643413] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x56)
+[    4.654351] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x56)
+[    4.665294] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x56)
+[    4.676279] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x57)
+[    4.687224] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x57)
+[    4.698161] sunxi_i2c_do_xfer()1935 - [i2c0] incomplete xfer (status: 0x20, dev addr: 0x57)
+[    4.709744] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    4.720785] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    4.731819] sunxi_i2c_do_xfer()1935 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x28)
+[    4.743537] axpdummy_ldo1: incomplete constraints, leaving on
+[    4.750092] axpdummy_ldo2: incomplete constraints, leaving on
+[    4.756517] axpdummy_ldo3: incomplete constraints, leaving on
+[    4.762942] axpdummy_ldo5: incomplete constraints, leaving on
+[    4.769361] axpdummy_ldo6: incomplete constraints, leaving on
+[    4.775779] axpdummy_ldo7: incomplete constraints, leaving on
+[    4.783223] Freeing unused kernel memory: 2048K
+[    4.794150] [ramdisk]: ======================ramdisk start====================
+[    4.808598] [ramdisk]: [/init]: RootDevice is "/dev/system"
+[    4.814976] [ramdisk]: [/init]: Boot_type is "0"
+[    4.834343] [ramdisk]: [/init]: Try to load Nand ...
+[    6.504826] device-mapper: crypt: xts(aes) using implementation "xts-aes-ce"
+[    6.549034] [ramdisk]: /dev/mapper/rootfs already has journal
+[    6.555627] [ramdisk]: e2fsck -y /dev/mapper/rootfs
+e2fsck 1.43.1 (08-Jun-2016)
+/dev/mapper/rootfs: clean, 1224/6000 files, 6585/12288 blocks
+[    6.566831] [ramdisk]: mount nand /dev/mapper/rootfs on /root temporarily
+[    6.581164] EXT4-fs: Warning: mounting with data=journal disables delayed allocation and O_DIRECT support!
+[    6.608883] EXT4-fs (dm-0): mounted filesystem with journalled data mode. Opts: data=journal
+[    6.618823] [ramdisk]: check partition /dev/by-name/data
+e2fsck 1.43.1 (08-Jun-2016)
+/dev/by-name/data: clean, 489/2048 files, 2631/8192 blocks[    6.631584] [ramdisk]: mount /dev/by-name/data on /mnt
+
+[    6.651116] EXT4-fs (nandf): mounted filesystem with journalled data mode. Opts: data=journal
+[    6.686954] [NAND]unknow cmd 0x4c01!
+[    6.691357] [ramdisk]: /dev/by-name/data has ext4
+[    6.696718] [ramdisk]: check_and_mount_data_parts
+[    6.702092] [ramdisk]: check partition /dev/by-name/data
+e2fsck 1.43.1 (08-Jun-2016)
+/dev/by-name/data: clean, 489/2048 files, 2631/8192 blocks
+[    6.713793] [ramdisk]: mount /dev/by-name/data on /mnt
+[    6.733699] EXT4-fs (nandf): mounted filesystem with journalled data mode. Opts: data=journal
+[    6.770932] [NAND]unknow cmd 0x4c01!
+[    6.775335] [ramdisk]: /dev/by-name/data has ext4
+[    6.780684] [ramdisk]: mount /dev/by-name/data on /root/data
+[    6.796611] EXT4-fs (nandf): mounted filesystem with journalled data mode. Opts: data=journal
+[    6.806636] [ramdisk]: check partition /dev/by-name/data_bak
+e2fsck 1.43.1 (08-Jun-2016)
+/dev/by-name/data_bak: clean, 489/2048 files, 2631/8192 blocks[    6.819712] [ramdisk]: mount /dev/by-name/data_bak on /mnt
+
+[    6.839808] EXT4-fs (nandg): mounted filesystem with journalled data mode. Opts: data=journal
+[    6.874936] [NAND]unknow cmd 0x4c01!
+[    6.879354] [ramdisk]: /dev/by-name/data_bak has ext4
+[    6.885092] [ramdisk]: mount /dev/by-name/data_bak on /root/data_bak
+[    6.901408] EXT4-fs (nandg): mounted filesystem with journalled data mode. Opts: data=journal
+[    6.919710] [ramdisk]: ======================ramdisk end====================
+[    7.001577] init: Console is alive
+[    7.005522] init: - watchdog -
+[    7.019375] init: - preinit -
+[    7.076596] procd: - early -
+[    7.079881] procd: - watchdog -
+[    7.666389] procd: - watchdog -
+[    7.670068] procd: - ubus -
+[    7.724727] procd: - init -
+[    7.729434] procd: - init complete -
+
+serial-shell: rescue setup start
+Thu Jan  1 00:00:07 GMT 1970
+root passwd entry:
+root:x:0:0:root:/tmp/root-home:/bin/ash
+root shadow entry:
+root:$1$codex$eCxgjhnxG9tAK7/uQ3W62.:17854:0:99999:7:::
+authorized_keys:
+drwx------    2 root     micro         1024 Jan  1 00:00 .[1;34m/etc/dropbear.[0m
+-rw-------    1 root     micro          575 Jan  1 00:00 .[0;0m/etc/dropbear/authorized_keys.[0m[    7.767335] libphy: gmac0: probed
+
+-rw-------    1 root     micro          575 Jan  1 00:00 .[0;0m/etc/dropbear/authorized_keys.root.[0m
+drwx------    3 root     micro           60 Jan  1 00:00 .[1;34m/tmp/root-home.[0m
+drwx------    2 root     micro           60 Jan  1 00:00 .[1;34m/tmp/root-home/.ssh.[0m
+-rw-------    1 root     micro          575 Jan  1 00:00 .[0;0m/tmp/root-home/.ssh/authorized_keys.[0m
+ssh-rsa <redacted-public-key>
+[    7.860602] sunxi-gmac gmac0 eth0: eth0: Type(6) PHY ID 00441400 at 0 IRQ poll (gmac0-0:00)
+[    7.896176] random: crng init done
+Command failed: Not found
+network state:
+eth0      Link encap:Ethernet  HWaddr C8:11:05:00:14:E2  
+          inet addr:192.168.2.254  Bcast:192.168.2.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:236 
+
+eth0:1    Link encap:Ethernet  HWaddr C8:11:05:00:14:E2  
+          inet addr:192.168.1.222  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          Interrupt:236 
+
+routes:
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+192.168.2.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+dropbear processes:
+[982] Jan 01 00:00:08 Failed loading /etc/dropbear/dropbear_dss_host_key
+[982] Jan 01 00:00:08 Failed loading /etc/dropbear/dropbear_ecdsa_host_key
+  980 root      1100 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
+  981 root      1204 S    {dropbear} /bin/sh /etc/rc.common /etc/init.d/dropbe
+try ssh root@192.168.2.254 or root@192.168.1.222 ports 22 and 2222
+serial-shell: rescue setup end
+
+serial-shell: starting interactive ash on /dev/ttyS0
+
+
+
+BusyBox v1.25.1 () built-in shell (ash)
+
+/ # [996] Jan 01 00:00:08 Running in background
+[    9.918210] sunxi-gmac gmac0 eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[1079] Jan 01 00:00:29 Child connection from 192.168.1.x:59094
+[1079] Jan 01 00:00:29 Login attempt for nonexistent user from 192.168.1.x:59094
+[1079] Jan 01 00:00:32 Exit before auth: Exited normally

@@ -1,0 +1,70 @@
+#!/bin/sh
+TTY=/dev/ttyS0
+
+while [ ! -e "$TTY" ]; do
+	sleep 1
+done
+
+/bin/stty -F "$TTY" 115200 sane clocal cread -crtscts -ixon -ixoff 2>/dev/null
+echo
+echo "serial-shell: rescue setup start"
+date
+touch /tmp/dropbear_on
+
+cat > /etc/passwd <<'EOF'
+root:x:0:0:root:/tmp/root-home:/bin/ash
+micro:x:0:0:micro:/tmp/root-home:/bin/ash
+admin:x:300:300:admin:/tmp/root-home:/bin/ash
+support:x:300:300:admin:/tmp/root-home:/bin/ash
+daemon:*:1:1:daemon:/var:/bin/false
+ftp:*:55:55:ftp:/home/ftp:/bin/false
+network:*:101:101:network:/var:/bin/false
+nobody:*:65534:65534:nobody:/var:/bin/false
+EOF
+cat > /etc/shadow <<'EOF'
+root:$1$codex$eCxgjhnxG9tAK7/uQ3W62.:17854:0:99999:7:::
+micro:*:17854:0:99999:7:::
+admin:$1$BQ5hoXV9$RxmaDUO33TS7O26yeMHZ81:17854:0:99999:7:::
+support:$1$q1kSoNsr$VGu4iEns4kz755aUVJZCn/:17854:0:99999:7:::
+daemon:*:0:0:99999:7:::
+ftp:*:0:0:99999:7:::
+network:*:0:0:99999:7:::
+nobody:*:0:0:99999:7:::
+EOF
+chmod 644 /etc/passwd
+chmod 600 /etc/shadow
+
+mkdir -p /tmp/root-home/.ssh /etc/dropbear
+cat > /tmp/root-home/.ssh/authorized_keys <<'EOF'
+__AUTHORIZED_KEY__
+EOF
+cp /tmp/root-home/.ssh/authorized_keys /etc/dropbear/authorized_keys 2>&1
+cp /tmp/root-home/.ssh/authorized_keys /etc/dropbear/authorized_keys.root 2>&1
+chmod 700 /tmp/root-home /tmp/root-home/.ssh /etc/dropbear
+chmod 600 /tmp/root-home/.ssh/authorized_keys /etc/dropbear/authorized_keys /etc/dropbear/authorized_keys.root 2>&1
+echo "root passwd entry:"
+/bin/grep '^root:' /etc/passwd 2>&1
+echo "root shadow entry:"
+/bin/grep '^root:' /etc/shadow 2>&1
+echo "authorized_keys:"
+/bin/ls -ld /tmp/root-home /tmp/root-home/.ssh /tmp/root-home/.ssh/authorized_keys /etc/dropbear /etc/dropbear/authorized_keys /etc/dropbear/authorized_keys.root 2>&1
+/bin/sed -n '1p' /tmp/root-home/.ssh/authorized_keys 2>&1
+/sbin/ifconfig eth0 up 2>&1
+/sbin/ifconfig eth0 192.168.2.254 netmask 255.255.255.0 up 2>&1
+/sbin/ifconfig eth0:1 192.168.1.222 netmask 255.255.255.0 up 2>&1
+/etc/init.d/dropbear stop 2>&1
+/etc/init.d/dropbear start 2>&1
+/usr/sbin/dropbear -E -p 2222 -P /tmp/dropbear-rescue.pid 2>&1 &
+echo "network state:"
+/sbin/ifconfig eth0 2>&1
+/sbin/ifconfig eth0:1 2>&1
+echo "routes:"
+/sbin/route -n 2>&1
+echo "dropbear processes:"
+/bin/ps | /bin/grep '[d]ropbear' 2>&1
+echo "try ssh micro@192.168.1.222 ports 22 and 2222"
+echo "serial-shell: rescue setup end"
+echo
+echo "serial-shell: starting interactive ash on $TTY"
+echo
+exec /bin/ash -i < "$TTY" > "$TTY" 2>&1

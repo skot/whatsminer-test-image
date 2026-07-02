@@ -1,0 +1,29 @@
+.DS_Store
+
+# Local/vendor firmware artifacts. Keep these locally or publish as release
+# assets if you have permission; do not commit them to git.
+artifacts/
+downloads/
+*.img
+*.fex
+*.zip
+
+# Extracted and scratch work directories.
+extracted-rootfs/
+firmware-patch/
+work-*/
+carved/
+_kernel.extracted/
+openixcard-output/
+
+# Local serial captures that have not been curated/redacted.
+H6os-bootlog*.txt
+sd-boot-log.txt
+stock-img-sd-boot.txt
+boot-sequence.txt
+
+# Python/tooling noise.
+__pycache__/
+*.pyc
+.venv/
+venv/
