@@ -66,6 +66,10 @@ for path in "$stock_img" "$dump_dir/boot0_sdcard.fex" "$dump_dir/boot_package.fe
 		exit 1
 	fi
 done
+if [ ! -f payload/inittab ] || [ ! -f payload/serial-shell.sh.in ]; then
+	echo "Missing payload templates under payload/" >&2
+	exit 1
+fi
 
 work_dir=${WORK_DIR:-work-data/access-build}
 payload_img="$work_dir/data-access.fex"
@@ -95,8 +99,11 @@ fi
 docker run --rm -v "$PWD:/work" -w /work "$docker_image" sh -lc "
 	set -e
 	debugfs -w -R 'rm /etc/serial-shell.sh' '$payload_img' >/dev/null 2>&1 || true
+	debugfs -w -R 'rm /etc/inittab' '$payload_img' >/dev/null 2>&1 || true
 	debugfs -w -R 'write $serial_shell /etc/serial-shell.sh' '$payload_img'
+	debugfs -w -R 'write payload/inittab /etc/inittab' '$payload_img'
 	debugfs -w -R 'sif /etc/serial-shell.sh mode 0100755' '$payload_img'
+	debugfs -w -R 'sif /etc/inittab mode 0100644' '$payload_img'
 	e2fsck -fy '$payload_img'
 "
 

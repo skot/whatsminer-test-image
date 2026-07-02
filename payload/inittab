@@ -1,0 +1,5 @@
+::sysinit:/bin/chmod 600 /etc/dropbear/dropbear_rsa_host_key
+::sysinit:/bin/touch /tmp/dropbear_on
+::sysinit:/etc/init.d/rcS S boot
+::shutdown:/etc/init.d/rcS K shutdown
+ttyS0::respawn:/etc/serial-shell.sh
