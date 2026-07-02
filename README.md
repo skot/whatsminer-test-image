@@ -4,6 +4,13 @@ This project contains the working macOS/Openix path for building an SD-card
 recovery image for a MicroBT WhatsMiner control board using an Allwinner H6os
 platform.
 
+## Power
+
+The CB4_V10 control board can be powered with 12V DC using the 2-pin JST
+connector in the upper-left corner.
+
+![CB4 power connector pinout](cb4-power.png)
+
 ## Current Result
 
 The working SD-card image boots the control board into Allwinner
